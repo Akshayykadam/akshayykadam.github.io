@@ -355,10 +355,15 @@ let mouseX = 0, mouseY = 0;
 let cursorX = 0, cursorY = 0;
 let followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
+// Check if device has fine pointer (mouse/trackpad)
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+if (!isTouchDevice) {
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+}
 
 function animateCursor() {
     // Smooth cursor movement
@@ -382,21 +387,23 @@ function animateCursor() {
     requestAnimationFrame(animateCursor);
 }
 
-// Cursor hover effects
-const hoverElements = document.querySelectorAll('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link');
-hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        if (cursor) cursor.classList.add('active');
-        if (cursorFollower) cursorFollower.classList.add('active');
-    });
-    el.addEventListener('mouseleave', () => {
-        if (cursor) cursor.classList.remove('active');
-        if (cursorFollower) cursorFollower.classList.remove('active');
-    });
-});
-
 // Start cursor animation
-animateCursor();
+if (!isTouchDevice) {
+    animateCursor();
+
+    // Cursor hover effects
+    const hoverElements = document.querySelectorAll('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            if (cursor) cursor.classList.add('active');
+            if (cursorFollower) cursorFollower.classList.add('active');
+        });
+        el.addEventListener('mouseleave', () => {
+            if (cursor) cursor.classList.remove('active');
+            if (cursorFollower) cursorFollower.classList.remove('active');
+        });
+    });
+}
 
 // ========================================
 // FLOATING PARTICLES

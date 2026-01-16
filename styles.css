@@ -235,7 +235,9 @@ button,
 }
 
 /* Hide cursor on mobile */
-@media (max-width: 768px) {
+/* Hide cursor on mobile and touch devices */
+@media (max-width: 768px),
+(pointer: coarse) {
 
     .cursor,
     .cursor-follower {
@@ -2456,7 +2458,9 @@ button,
     .gallery-grid {
         column-count: 1;
     }
-}/* ========================================
+}
+
+/* ========================================
    EXPERIENCE SECTION (TIMELINE)
 ======================================== */
 .experience {
