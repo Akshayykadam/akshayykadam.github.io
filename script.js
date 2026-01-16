@@ -212,7 +212,7 @@ const experience = [
     {
         start: "March 2022",
         end: "Present",
-        role: "Unity Developer",
+        role: "Software Developer",
         company: "Wizphys AI",
         location: "Pune, India",
         summary: "Building AI-powered Unity applications with real-time video processing.",
@@ -366,13 +366,13 @@ if (!isTouchDevice) {
 }
 
 function animateCursor() {
-    // Smooth cursor movement
-    cursorX += (mouseX - cursorX) * 0.2;
-    cursorY += (mouseY - cursorY) * 0.2;
+    // Instant cursor movement for no lag
+    cursorX = mouseX;
+    cursorY = mouseY;
 
-    // Slower follower
-    followerX += (mouseX - followerX) * 0.1;
-    followerY += (mouseY - followerY) * 0.1;
+    // Smoother follower loop
+    followerX += (mouseX - followerX) * 0.15;
+    followerY += (mouseY - followerY) * 0.15;
 
     if (cursor) {
         cursor.style.left = cursorX + 'px';
@@ -380,8 +380,8 @@ function animateCursor() {
     }
 
     if (cursorFollower) {
-        cursorFollower.style.left = followerX + 'px';
-        cursorFollower.style.top = followerY + 'px';
+        // Use transform for performance
+        cursorFollower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
     }
 
     requestAnimationFrame(animateCursor);
