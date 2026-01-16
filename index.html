@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Akshay Kadam - Full Stack Developer & Game Developer. Building immersive mobile apps, games, and AI-powered experiences.">
+    <meta name="keywords" content="Akshay Kadam, Developer, React Native, Unity, Game Development, Mobile Apps, AI">
+    <meta property="og:title" content="Akshay Kadam | Developer Portfolio">
+    <meta property="og:description"
+        content="Full Stack Developer & Game Developer building immersive digital experiences.">
+    <meta property="og:type" content="website">
+    <title>Akshay Kadam | Developer Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Floating Orbs Background -->
+    <div class="orbs-container" id="orbs-container"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles-container" id="particles-container"></div>
+
+    <!-- Floating Jellyfish -->
+    <div class="jellyfish-container" id="jellyfish-container"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">AK</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/Akshayykadam" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            <!-- Left Content -->
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-title">AKSHAY<br>KADAM</h1>
+                <p class="hero-subtitle">
+                    <span class="brace">{</span><span class="gradient-text">SOFTWARE</span><span class="brace">}</span>
+                    Engineer &
+                    <span class="brace">{</span><span class="gradient-text-alt">GAME</span><span class="brace">}</span>
+                    Developer
+                </p>
+                <p class="hero-description">
+                    Crafting immersive games, AI-powered applications, and premium mobile experiences with cutting-edge
+                    technology.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                            height="20">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Akshayykadam" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <!-- Stats Row -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">17+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Passion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual - Code Editor Mockup -->
+            <div class="hero-visual">
+                <div class="code-editor">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-filename">developer.js</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Akshay Kadam"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"Unity"</span>, <span class="code-string">"React Native"</span>,
+    <span class="code-string">"AI/ML"</span>, <span class="code-string">"C#"</span>
+  ],
+  <span class="code-property">passion</span>: <span class="code-string">"Building immersive experiences"</span>,
+  <span class="code-property">coffee</span>: <span class="code-boolean">true</span>,
+  
+  <span class="code-function">create</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">"Amazing things ✨"</span>;
+  }
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">What I <span class="gradient-text">Do</span></h2>
+            <p class="section-subtitle">Bringing ideas to life with code</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="url(#gradient1)" stroke-width="1.5">
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#06b6d4" />
+                                <stop offset="100%" style="stop-color:#a855f7" />
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M6 12H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4m4 0h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 12v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2M6 12h12" />
+                        <circle cx="8" cy="8" r="1.5" fill="url(#gradient1)" />
+                        <circle cx="16" cy="8" r="1.5" fill="url(#gradient1)" />
+                        <circle cx="12" cy="18" r="2" stroke="url(#gradient1)" fill="none" />
+                    </svg>
+                </div>
+                <h3 class="service-title">Game Development</h3>
+                <p class="service-description">Immersive 2D/3D games with Unity, featuring AI-powered NPCs and engaging
+                    gameplay mechanics.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="url(#gradient2)" stroke-width="1.5">
+                        <defs>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6" />
+                                <stop offset="100%" style="stop-color:#ec4899" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                        <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2" stroke-linecap="round" />
+                        <rect x="7" y="5" width="10" height="10" rx="1" fill="none" />
+                    </svg>
+                </div>
+                <h3 class="service-title">Mobile Apps</h3>
+                <p class="service-description">Premium React Native & Android applications with beautiful UI and
+                    seamless user experiences.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="url(#gradient3)" stroke-width="1.5">
+                        <defs>
+                            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#a855f7" />
+                                <stop offset="100%" style="stop-color:#06b6d4" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                        <path d="M12 2c-2.5 2.5-4 5.5-4 10s1.5 7.5 4 10c2.5-2.5 4-5.5 4-10s-1.5-7.5-4-10z" />
+                        <circle cx="12" cy="12" r="3" fill="url(#gradient3)" />
+                        <path d="M2 12h4m12 0h4M12 2v4m0 12v4" />
+                    </svg>
+                </div>
+                <h3 class="service-title">AI Integration</h3>
+                <p class="service-description">Intelligent features powered by ML-Agents, MediaPipe, and cutting-edge AI
+                    technologies.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="url(#gradient4)" stroke-width="1.5">
+                        <defs>
+                            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f97316" />
+                                <stop offset="100%" style="stop-color:#06b6d4" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="9" cy="9" r="5" />
+                        <circle cx="15" cy="15" r="5" />
+                        <path d="M9 4v2m0 6v2M4 9h2m6 0h2M15 10v2m0 6v2M10 15h2m6 0h2" />
+                    </svg>
+                </div>
+                <h3 class="service-title">Tools & Automation</h3>
+                <p class="service-description">Custom developer tools and workflows that boost productivity and
+                    streamline processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">A collection of my work</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="game">Games</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            <!-- Project Cards will be generated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-badge">
+                    <span class="badge">📍 Pune, Maharashtra</span>
+                </div>
+                <p class="about-text">
+                    Dedicated <strong>Game & App Developer</strong> with <strong>3+ years</strong> of experience
+                    building
+                    interactive and scalable applications in Unity. I'm passionate about leveraging AI and modern
+                    technologies like <strong>AI</strong> and <strong>ML-Agents</strong> to push the boundaries of
+                    design.
+                    of design.
+                </p>
+                <p class="about-text">
+                    Currently working as a <strong>Software Engineer</strong>, where I focus on Unity,
+                    AI integration, and scalable architecture. I believe in creating products that
+                    are not just functional, but truly immersive.
+                </p>
+            </div>
+            <div class="skills-container">
+                <h3 class="skills-title">Tech Stack</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Game Dev</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Unity3D</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">2D/3D</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Mobile</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Expo</span>
+                            <span class="skill-tag">Android</span>
+                            <span class="skill-tag">Kotlin</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & ML</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ML-Agents</span>
+                            <span class="skill-tag">AI Integration</span>
+                            <span class="skill-tag">MediaPipe</span>
+                            <span class="skill-tag">Gemini</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI Showcase Section -->
+    <section class="ui-gallery" id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">UI <span class="gradient-text">Showcase</span></h2>
+            <p class="section-subtitle">Visual highlights from my projects</p>
+        </div>
+        <div class="gallery-grid">
+            <!-- Atmos -->
+            <div class="gallery-item">
+                <img src="assets/projects/Atmos - Read the Air/536398415-56a7b9fc-c916-48b1-b8f1-8ff75b6a7f7a.png"
+                    alt="Atmos UI" loading="lazy">
+            </div>
+            <!-- OpenTV -->
+            <div class="gallery-item">
+                <img src="assets/projects/OpenTV/531697276-ec53d827-f3a9-4273-939d-42b19a16526b.png" alt="OpenTV UI"
+                    loading="lazy">
+            </div>
+            <!-- Cosmic Companion -->
+            <div class="gallery-item">
+                <img src="assets/projects/Cosmic Companion/526189915-a42efb51-6d3d-477f-8ff1-e6abb383e45a.png"
+                    alt="Cosmic Companion UI" loading="lazy">
+            </div>
+            <!-- Liftly -->
+            <div class="gallery-item">
+                <img src="assets/projects/Liftly - Workout & Wellness Tracker/528054108-00165087-39ed-4de5-938a-d7164bdfe8e4.png"
+                    alt="Liftly UI" loading="lazy">
+            </div>
+            <!-- Wavefy -->
+            <div class="gallery-item">
+                <img src="assets/projects/Wavefy/523415391-78ebb282-eced-43ad-a2c1-cd1e615a633c.png" alt="Wavefy UI"
+                    loading="lazy">
+            </div>
+            <!-- PixelNest -->
+            <div class="gallery-item">
+                <img src="assets/projects/PixelNest/523440390-d98539ef-3e94-4028-befe-37de7748be85.png"
+                    alt="PixelNest UI" loading="lazy">
+            </div>
+            <!-- FuelMate -->
+            <div class="gallery-item">
+                <img src="assets/projects/FuelMate/Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.00.png"
+                    alt="FuelMate UI" loading="lazy">
+            </div>
+            <!-- TrueCam -->
+            <div class="gallery-item">
+                <img src="assets/projects/TrueCam/529585447-7207c155-9b2e-454b-a112-5c58836bd768.png" alt="TrueCam UI"
+                    loading="lazy">
+            </div>
+            <!-- HalloDeutsch -->
+            <div class="gallery-item">
+                <img src="assets/projects/HalloDeutsch/536047679-e7dac5f7-a596-4fbc-9215-337499989891.png"
+                    alt="HalloDeutsch UI" loading="lazy">
+            </div>
+            <!-- HealthPlus -->
+            <div class="gallery-item">
+                <img src="assets/projects/HealthPlus/530419350-9db595d4-50a5-4f8e-b60d-91c3159c9cdb.png"
+                    alt="HealthPlus UI" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-text">Interested in collaborating or have a project in mind?</p>
+            <div class="contact-links">
+                <a href="https://github.com/Akshayykadam" target="_blank" rel="noopener" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:akshaykadam@example.com" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                    <span>Email</span>
+                </a>
+                <a href="https://linkedin.com/in/akshaykadam96" target="_blank" rel="noopener" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://wa.me/917020840564" target="_blank" rel="noopener" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Akshay Kadam. Built with ❤️</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content" id="modal-content">
+            <button class="modal-close" id="modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="modal-layout">
+                <div class="modal-left">
+                    <div class="modal-image" id="modal-image"></div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-tech" id="modal-tech"></div>
+                    <div class="modal-actions">
+                        <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="modal-github">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
