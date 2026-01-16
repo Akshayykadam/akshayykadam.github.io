@@ -14,17 +14,6 @@ const projects = [
         category: "mobile"
     },
     {
-        id: 3,
-        name: "TrueCam",
-        folder: "TrueCam",
-        images: ["529585447-7207c155-9b2e-454b-a112-5c58836bd768.png", "529585467-91a69da0-f9b6-47d0-8a30-ee1cd7f4cf5b.png", "529585474-b5f7b40d-5da2-42f6-bc4e-4f7816a3acbe.png"],
-        description: "A zero-processing Android camera app that captures true-to-life images without any AI enhancement or filters. Pure, unprocessed photography at its finest.",
-        tech: ["Android", "Camera API", "Image Processing"],
-        github: "https://github.com/Akshayykadam/TrueCam-Zero-Processing-Camera",
-        emoji: "📷",
-        category: "mobile"
-    },
-    {
         id: 4,
         name: "HalloDeutsch",
         folder: "HalloDeutsch",
@@ -33,39 +22,6 @@ const projects = [
         tech: ["React Native", "Language Learning"],
         github: "https://github.com/Akshayykadam/HalloDeutsch",
         emoji: "🇩🇪",
-        category: "mobile"
-    },
-    {
-        id: 5,
-        name: "Local AI Unity Tool",
-        folder: "Local AI ",
-        images: ["529724915-e067bbb8-d08b-4176-9793-41a9eda9d359.png", "529724933-fb74575e-3caa-4976-a115-ad0cc08292d6.png", "529724939-9d6d4cf6-224c-4a57-83da-c705b371e962.png", "529724950-2c158764-e918-43fb-a404-a79862a41028.png", "529724956-d1c9c2dd-243d-4c36-8945-c15b665bd063.png"],
-        description: "A Unity Editor tool that integrates local AI capabilities directly into your game development workflow. Generate code, analyze scenes, and get AI assistance without leaving Unity.",
-        tech: ["Unity", "C#", "Local AI"],
-        github: "https://github.com/Akshayykadam/Local-AI-Unity-Tool",
-        emoji: "🤖",
-        category: "ai"
-    },
-    {
-        id: 6,
-        name: "FuelMate",
-        folder: "FuelMate",
-        images: ["Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.00.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.10.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.19.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.36.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.42.png"],
-        description: "A comprehensive fuel tracking and vehicle management app. Track fuel expenses, calculate mileage, and monitor your vehicle's performance with beautiful charts and analytics.",
-        tech: ["React Native", "Firebase"],
-        github: "https://github.com/Akshayykadam/FuelMate",
-        emoji: "⛽",
-        category: "mobile"
-    },
-    {
-        id: 7,
-        name: "OpenTV",
-        folder: "OpenTV",
-        images: ["531697276-ec53d827-f3a9-4273-939d-42b19a16526b.png", "531697277-d226d59c-ea8d-40fb-9f50-fcc544c5bd7f.png", "531697280-5b6de8dd-1620-46c6-8a32-f4030ea09779.png", "531697283-f84a808b-88f1-4c2d-aa4f-dc13d3e7458b.png", "531697284-2601e452-872f-4b2b-8fa6-654b90586441.png"],
-        description: "A media streaming application built with React Native. Browse and stream content with a sleek, modern interface designed for the best viewing experience.",
-        tech: ["React Native", "Media Streaming"],
-        github: "https://github.com/Akshayykadam/OpenTV",
-        emoji: "📺",
         category: "mobile"
     },
     {
@@ -78,17 +34,6 @@ const projects = [
         github: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker",
         emoji: "💰",
         category: "ai"
-    },
-    {
-        id: 10,
-        name: "Health Plus",
-        folder: "HealthPlus",
-        images: ["530419350-9db595d4-50a5-4f8e-b60d-91c3159c9cdb.png", "530419353-4f50f2aa-6acd-4a30-80ed-b3d84b94f273.png", "530419357-39ce4f77-5769-4df6-8038-590a1b5ef698.png", "530419360-3707c312-b743-4664-b270-6f92797f6a16.png", "530419361-5b8f5e5f-7622-476d-9050-75e429f90444.png"],
-        description: "A comprehensive health tracking application. Monitor your fitness goals, track daily activities, and maintain a healthy lifestyle with personalized recommendations.",
-        tech: ["React Native", "Health Tracking"],
-        github: "https://github.com/Akshayykadam/Health-Plus",
-        emoji: "💪",
-        category: "mobile"
     },
     {
         id: 11,
@@ -124,6 +69,50 @@ const projects = [
         category: "mobile"
     },
     {
+        id: 7,
+        name: "OpenTV",
+        folder: "OpenTV",
+        images: ["531697276-ec53d827-f3a9-4273-939d-42b19a16526b.png", "531697277-d226d59c-ea8d-40fb-9f50-fcc544c5bd7f.png", "531697280-5b6de8dd-1620-46c6-8a32-f4030ea09779.png", "531697283-f84a808b-88f1-4c2d-aa4f-dc13d3e7458b.png", "531697284-2601e452-872f-4b2b-8fa6-654b90586441.png"],
+        description: "A media streaming application built with React Native. Browse and stream content with a sleek, modern interface designed for the best viewing experience.",
+        tech: ["React Native", "Media Streaming"],
+        github: "https://github.com/Akshayykadam/OpenTV",
+        emoji: "�",
+        category: "mobile"
+    },
+    {
+        id: 6,
+        name: "FuelMate",
+        folder: "FuelMate",
+        images: ["Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.00.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.10.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.19.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.36.png", "Simulator Screenshot - iPhone 16e - 2025-12-31 at 23.36.42.png"],
+        description: "A comprehensive fuel tracking and vehicle management app. Track fuel expenses, calculate mileage, and monitor your vehicle's performance with beautiful charts and analytics.",
+        tech: ["React Native", "Firebase"],
+        github: "https://github.com/Akshayykadam/FuelMate",
+        emoji: "⛽",
+        category: "mobile"
+    },
+    {
+        id: 5,
+        name: "Local AI Unity Tool",
+        folder: "Local AI ",
+        images: ["529724915-e067bbb8-d08b-4176-9793-41a9eda9d359.png", "529724933-fb74575e-3caa-4976-a115-ad0cc08292d6.png", "529724939-9d6d4cf6-224c-4a57-83da-c705b371e962.png", "529724950-2c158764-e918-43fb-a404-a79862a41028.png", "529724956-d1c9c2dd-243d-4c36-8945-c15b665bd063.png"],
+        description: "A Unity Editor tool that integrates local AI capabilities directly into your game development workflow. Generate code, analyze scenes, and get AI assistance without leaving Unity.",
+        tech: ["Unity", "C#", "Local AI"],
+        github: "https://github.com/Akshayykadam/Local-AI-Unity-Tool",
+        emoji: "🤖",
+        category: "ai"
+    },
+    {
+        id: 3,
+        name: "TrueCam",
+        folder: "TrueCam",
+        images: ["529585447-7207c155-9b2e-454b-a112-5c58836bd768.png", "529585467-91a69da0-f9b6-47d0-8a30-ee1cd7f4cf5b.png", "529585474-b5f7b40d-5da2-42f6-bc4e-4f7816a3acbe.png"],
+        description: "A zero-processing Android camera app that captures true-to-life images without any AI enhancement or filters. Pure, unprocessed photography at its finest.",
+        tech: ["Android", "Camera API", "Image Processing"],
+        github: "https://github.com/Akshayykadam/TrueCam-Zero-Processing-Camera",
+        emoji: "📷",
+        category: "mobile"
+    },
+    {
         id: 15,
         name: "PixelNest",
         folder: "PixelNest",
@@ -146,6 +135,17 @@ const projects = [
         category: "mobile"
     },
     // Projects without images - show icons instead
+    {
+        id: 10,
+        name: "Health Plus",
+        folder: "HealthPlus",
+        images: ["530419350-9db595d4-50a5-4f8e-b60d-91c3159c9cdb.png", "530419353-4f50f2aa-6acd-4a30-80ed-b3d84b94f273.png", "530419357-39ce4f77-5769-4df6-8038-590a1b5ef698.png", "530419360-3707c312-b743-4664-b270-6f92797f6a16.png", "530419361-5b8f5e5f-7622-476d-9050-75e429f90444.png"],
+        description: "A comprehensive health tracking application. Monitor your fitness goals, track daily activities, and maintain a healthy lifestyle with personalized recommendations.",
+        tech: ["React Native", "Health Tracking"],
+        github: "https://github.com/Akshayykadam/Health-Plus",
+        emoji: "💪",
+        category: "mobile"
+    },
     {
         id: 1,
         name: "Sword Warrior RPG 2D",
