@@ -206,6 +206,149 @@ const modalImage = document.getElementById('modal-image');
 const modalGithub = document.getElementById('modal-github');
 
 // ========================================
+// EXPERIENCE DATA
+// ========================================
+const experience = [
+    {
+        start: "March 2022",
+        end: "Present",
+        role: "Unity Developer",
+        company: "Wizphys AI",
+        location: "Pune, India",
+        summary: "Building AI-powered Unity applications with real-time video processing.",
+        highlights: [
+            "Developed Unity applications integrated with AI using MediaPipe.",
+            "Implemented robust authentication systems with industry security standards.",
+            "Managed Firebase databases, cloud storage, and real-time updates.",
+            "Optimized cloud storage and media handling for performance.",
+            "Designed and maintained responsive, user-focused interfaces.",
+            "Integrated third-party payment systems and SDKs.",
+            "Documented end-to-end app development for team alignment."
+        ]
+    },
+    {
+        start: "November 2021",
+        end: "March 2022",
+        role: "Junior Game Developer (Freelance)",
+        company: "Cypher Mobile Gaming",
+        location: "Pune, India",
+        summary: "Transitioned into hands-on game development using Unity.",
+        highlights: [
+            "Implemented character controllers, physics systems, and animations.",
+            "Developed interactive gameplay mechanics in Unity.",
+            "Collaborated closely with design and art teams to maintain quality.",
+            "Contributed to engaging mobile game experiences."
+        ]
+    },
+    {
+        start: "July 2020",
+        end: "November 2021",
+        role: "QA Engineer",
+        company: "Jetsynthesys",
+        location: "Pune, India",
+        summary: "Focused on quality assurance for applications across devices and platforms.",
+        highlights: [
+            "Performed game testing including guide and compliance testing.",
+            "Ensured compatibility across multiple devices and platforms.",
+            "Prepared detailed test cases based on requirement specifications.",
+            "Executed structured test plans to validate product stability."
+        ]
+    }
+];
+
+// ========================================
+// TIMELINE RENDERING
+// ========================================
+const timelineContainer = document.getElementById('timeline-container');
+
+function renderTimeline() {
+    if (!timelineContainer) return;
+
+    // Create progress line element
+    const progressLine = document.createElement('div');
+    progressLine.className = 'timeline-line-progress';
+    progressLine.id = 'timeline-progress';
+    timelineContainer.appendChild(progressLine);
+
+    experience.forEach((item, index) => {
+        const timelineItem = document.createElement('div');
+        timelineItem.className = 'timeline-item';
+
+        // Tags generation from specific words or simple highlight mapping if needed, 
+        // but for now we'll just format the highlights as bullet points
+        const highlightsHtml = item.highlights.map(h => `<li>${h}</li>`).join('');
+
+        timelineItem.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">${item.start} - ${item.end}</span>
+                <h3 class="timeline-title">${item.role}</h3>
+                <div class="timeline-company">
+                    ${item.company} <span class="location">📍 ${item.location}</span>
+                </div>
+                <p class="timeline-description">${item.summary}</p>
+                <ul class="timeline-highlights" style="list-style-type: disc; padding-left: 20px; margin-top: 10px; color: var(--text-secondary); font-size: 0.9rem;">
+                   ${highlightsHtml}
+                </ul>
+            </div>
+        `;
+
+        timelineContainer.appendChild(timelineItem);
+    });
+
+    initTimelineAnimation();
+}
+
+function initTimelineAnimation() {
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Light up dot
+                const dot = entry.target.querySelector('.timeline-dot');
+                if (dot) dot.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => observer.observe(item));
+
+    // Scroll progress for the line
+    window.addEventListener('scroll', updateTimelineProgress);
+}
+
+function updateTimelineProgress() {
+    const timeline = document.getElementById('timeline-container');
+    const progressLine = document.getElementById('timeline-progress');
+
+    if (!timeline || !progressLine) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Start drawing when top of timeline hits 50% of screen
+    const startOffset = windowHeight / 2;
+
+    // Calculate how much of the timeline has passed the center of the screen
+    let percentage = (startOffset - rect.top) / rect.height;
+
+    // Clamp between 0 and 1
+    percentage = Math.max(0, Math.min(1, percentage));
+
+    progressLine.style.height = `${percentage * 100}%`;
+}
+
+// Call render
+renderTimeline();
+
+// ========================================
 // CUSTOM CURSOR
 // ========================================
 let mouseX = 0, mouseY = 0;
