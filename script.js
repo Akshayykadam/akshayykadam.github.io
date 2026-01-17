@@ -21,6 +21,8 @@ const projects = [
         description: "A German language learning app built with React Native. Features interactive lessons, vocabulary practice with flashcards, and audio pronunciations for an immersive learning experience.",
         tech: ["React Native", "Language Learning"],
         github: "https://github.com/Akshayykadam/HalloDeutsch",
+        release: "https://github.com/Akshayykadam/HalloDeutsch/releases/latest",
+        releaseVersion: "v1.0.0",
         emoji: "🇩🇪",
         category: "mobile"
     },
@@ -32,6 +34,8 @@ const projects = [
         description: "An intelligent expense tracking app powered by AI. Automatically categorizes transactions, provides insights, and helps you understand your spending patterns.",
         tech: ["AI", "React Native"],
         github: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker",
+        release: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker/releases/latest",
+        releaseVersion: "v0.0.2",
         emoji: "💰",
         category: "ai"
     },
@@ -43,6 +47,8 @@ const projects = [
         description: "Your personal workout companion. Features customizable workout plans, exercise tracking, progress visualization, and motivational features to keep you on track.",
         tech: ["React Native", "Fitness"],
         github: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy",
+        release: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy/releases/latest",
+        releaseVersion: "v1.0.7",
         emoji: "🏋️",
         category: "mobile"
     },
@@ -65,6 +71,8 @@ const projects = [
         description: "A modern, premium podcast player with dark-mode UI, offline listening, sleep timer, and playback speed control. Built for the best audio experience.",
         tech: ["Mobile App", "Audio/UI"],
         github: "https://github.com/Akshayykadam/Wavefy",
+        release: "https://github.com/Akshayykadam/Wavefy/releases/latest",
+        releaseVersion: "v0.1.1",
         emoji: "🎵",
         category: "mobile"
     },
@@ -76,7 +84,9 @@ const projects = [
         description: "A media streaming application built with React Native. Browse and stream content with a sleek, modern interface designed for the best viewing experience.",
         tech: ["React Native", "Media Streaming"],
         github: "https://github.com/Akshayykadam/OpenTV",
-        emoji: "�",
+        release: "https://github.com/Akshayykadam/OpenTV/releases/latest",
+        releaseVersion: "v1.1.0",
+        emoji: "📺",
         category: "mobile"
     },
     {
@@ -87,6 +97,8 @@ const projects = [
         description: "A comprehensive fuel tracking and vehicle management app. Track fuel expenses, calculate mileage, and monitor your vehicle's performance with beautiful charts and analytics.",
         tech: ["React Native", "Firebase"],
         github: "https://github.com/Akshayykadam/FuelMate",
+        release: "https://github.com/Akshayykadam/FuelMate/releases/latest",
+        releaseVersion: "v1.0.4",
         emoji: "⛽",
         category: "mobile"
     },
@@ -120,6 +132,8 @@ const projects = [
         description: "A beautiful and immersive wallpaper discovery application. Browse, search, and download high-quality images from a vast collection with a stunning UI.",
         tech: ["UI/UX", "Frontend"],
         github: "https://github.com/Akshayykadam/PixelNest",
+        release: "https://github.com/Akshayykadam/PixelNest/releases/latest",
+        releaseVersion: "v0.1.0",
         emoji: "🖼️",
         category: "mobile"
     },
@@ -392,7 +406,7 @@ if (!isTouchDevice) {
     animateCursor();
 
     // Cursor hover effects
-    const hoverElements = document.querySelectorAll('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link');
+    const hoverElements = document.querySelectorAll('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link, .download-btn');
     hoverElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             if (cursor) cursor.classList.add('active');
@@ -804,6 +818,19 @@ function createProjectCard(project) {
         `;
     }
 
+    // Generate download button HTML if release exists
+    const downloadBtnHtml = project.release ? `
+        <a href="${project.release}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download APK</span>
+            <span class="version-tag">${project.releaseVersion}</span>
+        </a>
+    ` : '';
+
     card.innerHTML = `
         ${imageHtml}
         <div class="project-content">
@@ -817,6 +844,7 @@ function createProjectCard(project) {
             <div class="project-tech">
                 ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
             </div>
+            ${downloadBtnHtml}
         </div>
     `;
 
