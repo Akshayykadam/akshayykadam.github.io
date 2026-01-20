@@ -3,6 +3,19 @@
 // ========================================
 const projects = [
     {
+        id: 18,
+        name: "TrainIQ",
+        folder: "TrainIQ",
+        images: ["Screenshot_1768888951.png", "Screenshot_1768888956.png", "Screenshot_1768888958.png", "Screenshot_1768888965.png", "Screenshot_20260120-114309.png"],
+        description: "A smart training assistant designed to optimize your workouts. Features intelligent tracking, performance analytics, and personalized recommendations to elevate your fitness journey.",
+        tech: ["React Native", "Fitness", "Analytics"],
+        github: "https://github.com/Akshayykadam/TrainIQ",
+        release: "https://github.com/Akshayykadam/TrainIQ/releases/latest",
+        releaseVersion: "v1.0.0",
+        emoji: "🧠",
+        category: "mobile"
+    },
+    {
         id: 2,
         name: "Atmos - Read the Air",
         folder: "Atmos - Read the Air",
@@ -187,6 +200,7 @@ const projects = [
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a3 3 0 100 6 3 3 0 000-6zM12 8v3M8 14l-2 8M16 14l2 8M12 11l-4 3M12 11l4 3M8 14h8"/></svg>',
         category: "ai"
     },
+
     {
         id: 17,
         name: "YouTube Auto PlayPause",
