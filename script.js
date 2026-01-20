@@ -10,8 +10,8 @@ const projects = [
         description: "A smart training assistant designed to optimize your workouts. Features intelligent tracking, performance analytics, and personalized recommendations to elevate your fitness journey.",
         tech: ["React Native", "Fitness", "Analytics"],
         github: "https://github.com/Akshayykadam/TrainIQ",
-        release: "https://github.com/Akshayykadam/TrainIQ/releases/latest",
-        releaseVersion: "v1.0.0",
+        release: "https://github.com/Akshayykadam/TrainIQ/releases",
+        releaseVersion: "Latest",
         emoji: "🧠",
         category: "mobile"
     },
@@ -23,6 +23,8 @@ const projects = [
         description: "A beautiful React Native app that provides real-time air quality data with an intuitive, immersive interface. Features AI-powered insights and comprehensive AQI monitoring.",
         tech: ["React Native", "APIs", "AQI Data"],
         github: "https://github.com/Akshayykadam/Atmos-Read-the-air",
+        release: "https://github.com/Akshayykadam/Atmos-Read-the-air/releases",
+        releaseVersion: "Latest",
         emoji: "🌬️",
         category: "mobile"
     },
@@ -34,8 +36,8 @@ const projects = [
         description: "A German language learning app built with React Native. Features interactive lessons, vocabulary practice with flashcards, and audio pronunciations for an immersive learning experience.",
         tech: ["React Native", "Language Learning"],
         github: "https://github.com/Akshayykadam/HalloDeutsch",
-        release: "https://github.com/Akshayykadam/HalloDeutsch/releases/latest",
-        releaseVersion: "v1.0.0",
+        release: "https://github.com/Akshayykadam/HalloDeutsch/releases",
+        releaseVersion: "Latest",
         emoji: "🇩🇪",
         category: "mobile"
     },
@@ -47,8 +49,8 @@ const projects = [
         description: "An intelligent expense tracking app powered by AI. Automatically categorizes transactions, provides insights, and helps you understand your spending patterns.",
         tech: ["AI", "React Native"],
         github: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker",
-        release: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker/releases/latest",
-        releaseVersion: "v0.0.2",
+        release: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker/releases",
+        releaseVersion: "Latest",
         emoji: "💰",
         category: "ai"
     },
@@ -60,8 +62,8 @@ const projects = [
         description: "Your personal workout companion. Features customizable workout plans, exercise tracking, progress visualization, and motivational features to keep you on track.",
         tech: ["React Native", "Fitness"],
         github: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy",
-        release: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy/releases/latest",
-        releaseVersion: "v1.0.7",
+        release: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy/releases",
+        releaseVersion: "Latest",
         emoji: "🏋️",
         category: "mobile"
     },
@@ -84,8 +86,8 @@ const projects = [
         description: "A modern, premium podcast player with dark-mode UI, offline listening, sleep timer, and playback speed control. Built for the best audio experience.",
         tech: ["Mobile App", "Audio/UI"],
         github: "https://github.com/Akshayykadam/Wavefy",
-        release: "https://github.com/Akshayykadam/Wavefy/releases/latest",
-        releaseVersion: "v0.1.1",
+        release: "https://github.com/Akshayykadam/Wavefy/releases",
+        releaseVersion: "Latest",
         emoji: "🎵",
         category: "mobile"
     },
@@ -97,8 +99,8 @@ const projects = [
         description: "A media streaming application built with React Native. Browse and stream content with a sleek, modern interface designed for the best viewing experience.",
         tech: ["React Native", "Media Streaming"],
         github: "https://github.com/Akshayykadam/OpenTV",
-        release: "https://github.com/Akshayykadam/OpenTV/releases/latest",
-        releaseVersion: "v1.1.0",
+        release: "https://github.com/Akshayykadam/OpenTV/releases",
+        releaseVersion: "Latest",
         emoji: "📺",
         category: "mobile"
     },
@@ -110,8 +112,8 @@ const projects = [
         description: "A comprehensive fuel tracking and vehicle management app. Track fuel expenses, calculate mileage, and monitor your vehicle's performance with beautiful charts and analytics.",
         tech: ["React Native", "Firebase"],
         github: "https://github.com/Akshayykadam/FuelMate",
-        release: "https://github.com/Akshayykadam/FuelMate/releases/latest",
-        releaseVersion: "v1.0.4",
+        release: "https://github.com/Akshayykadam/FuelMate/releases",
+        releaseVersion: "Latest",
         emoji: "⛽",
         category: "mobile"
     },
@@ -123,6 +125,9 @@ const projects = [
         description: "A Unity Editor tool that integrates local AI capabilities directly into your game development workflow. Generate code, analyze scenes, and get AI assistance without leaving Unity.",
         tech: ["Unity", "C#", "Local AI"],
         github: "https://github.com/Akshayykadam/Local-AI-Unity-Tool",
+        release: "https://github.com/Akshayykadam/Local-AI-Unity-Tool/releases",
+        releaseVersion: "Latest",
+        releaseLabel: "Download Package",
         emoji: "🤖",
         category: "ai"
     },
@@ -145,8 +150,8 @@ const projects = [
         description: "A beautiful and immersive wallpaper discovery application. Browse, search, and download high-quality images from a vast collection with a stunning UI.",
         tech: ["UI/UX", "Frontend"],
         github: "https://github.com/Akshayykadam/PixelNest",
-        release: "https://github.com/Akshayykadam/PixelNest/releases/latest",
-        releaseVersion: "v0.1.0",
+        release: "https://github.com/Akshayykadam/PixelNest/releases",
+        releaseVersion: "Latest",
         emoji: "🖼️",
         category: "mobile"
     },
@@ -840,7 +845,7 @@ function createProjectCard(project) {
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            <span>Download APK</span>
+            <span>${project.releaseLabel || 'Download APK'}</span>
             <span class="version-tag">${project.releaseVersion}</span>
         </a>
     ` : '';
