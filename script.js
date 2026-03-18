@@ -12,8 +12,9 @@ const projects = [
         github: "https://github.com/Akshayykadam/TrainIQ",
         release: "https://github.com/Akshayykadam/TrainIQ/releases",
         releaseVersion: "Latest",
-        emoji: "🧠",
-        category: "mobile"
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 2.5-1.5 4.5-3 6l-1 4H9l-1-4c-1.5-1.5-3-3.5-3-6a7 7 0 017-7z"/><path d="M9 19h6M10 22h4"/></svg>',
+        category: "mobile",
+        featured: true
     },
     {
         id: 2,
@@ -25,7 +26,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/Atmos-Read-the-air",
         release: "https://github.com/Akshayykadam/Atmos-Read-the-air/releases",
         releaseVersion: "Latest",
-        emoji: "🌬️",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg>',
         category: "mobile"
     },
     {
@@ -38,8 +39,9 @@ const projects = [
         github: "https://github.com/Akshayykadam/HalloDeutsch",
         release: "https://github.com/Akshayykadam/HalloDeutsch/releases",
         releaseVersion: "Latest",
-        emoji: "🇩🇪",
-        category: "mobile"
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 14.5A2.5 2.5 0 016.5 12H20"/><path d="M4 9.5A2.5 2.5 0 016.5 7H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20"/></svg>',
+        category: "mobile",
+        featured: true
     },
     {
         id: 9,
@@ -51,7 +53,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker",
         release: "https://github.com/Akshayykadam/AI-Powered-Expense-Tracker/releases",
         releaseVersion: "Latest",
-        emoji: "💰",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg>',
         category: "ai"
     },
     {
@@ -64,7 +66,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy",
         release: "https://github.com/Akshayykadam/Liftly-The-Workout-Buddy/releases",
         releaseVersion: "Latest",
-        emoji: "🏋️",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 6.5l11 11M6.5 17.5l11-11"/><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>',
         category: "mobile"
     },
     {
@@ -75,7 +77,7 @@ const projects = [
         description: "Your daily window to the universe. A beautiful React Native app featuring NASA's stunning space imagery, asteroid tracking, Earth views, and AI-powered explanations.",
         tech: ["React Native", "Space APIs"],
         github: "https://github.com/Akshayykadam/Cosmic-Companion-App",
-        emoji: "🌌",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
         category: "mobile"
     },
     {
@@ -88,7 +90,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/Wavefy",
         release: "https://github.com/Akshayykadam/Wavefy/releases",
         releaseVersion: "Latest",
-        emoji: "🎵",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
         category: "mobile"
     },
     {
@@ -101,7 +103,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/OpenTV",
         release: "https://github.com/Akshayykadam/OpenTV/releases",
         releaseVersion: "Latest",
-        emoji: "📺",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
         category: "mobile"
     },
     {
@@ -114,7 +116,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/FuelMate",
         release: "https://github.com/Akshayykadam/FuelMate/releases",
         releaseVersion: "Latest",
-        emoji: "⛽",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 22V6a2 2 0 012-2h8a2 2 0 012 2v16"/><path d="M15 10h2a2 2 0 012 2v3a2 2 0 004 0V8l-3-3"/><path d="M5 10h8"/></svg>',
         category: "mobile"
     },
     {
@@ -128,7 +130,7 @@ const projects = [
         release: "https://github.com/Akshayykadam/Local-AI-Unity-Tool/releases",
         releaseVersion: "Latest",
         releaseLabel: "Download Package",
-        emoji: "🤖",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 2v6M7 13h0M17 13h0M9 17h6"/><circle cx="7" cy="2" r="0" /><path d="M3 14h-1M22 14h-1"/></svg>',
         category: "ai"
     },
     {
@@ -139,7 +141,7 @@ const projects = [
         description: "A zero-processing Android camera app that captures true-to-life images without any AI enhancement or filters. Pure, unprocessed photography at its finest.",
         tech: ["Android", "Camera API", "Image Processing"],
         github: "https://github.com/Akshayykadam/TrueCam-Zero-Processing-Camera",
-        emoji: "📷",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>',
         category: "mobile"
     },
     {
@@ -152,7 +154,7 @@ const projects = [
         github: "https://github.com/Akshayykadam/PixelNest",
         release: "https://github.com/Akshayykadam/PixelNest/releases",
         releaseVersion: "Latest",
-        emoji: "🖼️",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>',
         category: "mobile"
     },
     {
@@ -163,10 +165,9 @@ const projects = [
         description: "A React Native movie discovery app. Browse trending movies, search for titles, view detailed information, and save your favorites.",
         tech: ["React Native", "Movie APIs"],
         github: "https://github.com/Akshayykadam/MoviesPlus-React-Native-App",
-        emoji: "🎬",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>',
         category: "mobile"
     },
-    // Projects without images - show icons instead
     {
         id: 10,
         name: "Health Plus",
@@ -175,7 +176,7 @@ const projects = [
         description: "A comprehensive health tracking application. Monitor your fitness goals, track daily activities, and maintain a healthy lifestyle with personalized recommendations.",
         tech: ["React Native", "Health Tracking"],
         github: "https://github.com/Akshayykadam/Health-Plus",
-        emoji: "💪",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
         category: "mobile"
     },
     {
@@ -205,7 +206,6 @@ const projects = [
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a3 3 0 100 6 3 3 0 000-6zM12 8v3M8 14l-2 8M16 14l2 8M12 11l-4 3M12 11l4 3M8 14h8"/></svg>',
         category: "ai"
     },
-
     {
         id: 17,
         name: "YouTube Auto PlayPause",
@@ -214,181 +214,170 @@ const projects = [
         github: "https://github.com/Akshayykadam/Youtube-Auto-PlayPause-extension",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>',
         category: "other"
+    },
+    {
+        id: 19,
+        name: "GitHub Contributions Wallpaper",
+        description: "A premium Android Live Wallpaper that brings your GitHub contributions graph right to your home screen. Beautiful, real-time visualization of your coding activity.",
+        tech: ["Android", "Kotlin", "Live Wallpaper"],
+        github: "https://github.com/Akshayykadam/GitHub-Contributions-Live-Wallpaper",
+        release: "https://github.com/Akshayykadam/GitHub-Contributions-Live-Wallpaper/releases",
+        releaseVersion: "Latest",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+        category: "mobile"
+    },
+    {
+        id: 20,
+        name: "OpenCity3D Engine",
+        description: "Generate real-world 3D cities in Unity directly from OpenStreetMap data with a single click. No external tools or complex parsing required.",
+        tech: ["Unity", "C#", "OpenStreetMap"],
+        github: "https://github.com/Akshayykadam/OpenCity3D-Engine",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6M9 9h0M15 9h0M9 13h0M15 13h0"/></svg>',
+        category: "game"
+    },
+    {
+        id: 21,
+        name: "UnityLink Chat",
+        description: "Drop-in Unity chat plugin with 1-to-1 messaging, groups, media sharing, reactions, and E2E encryption. Built on Firebase, works on Android, iOS, and Desktop.",
+        tech: ["Unity", "Firebase", "Chat SDK"],
+        github: "https://github.com/Akshayykadam/UnityLink-Chat",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
+        category: "game"
+    },
+    {
+        id: 22,
+        name: "InnerLoop",
+        description: "A voice-first AI companion for mental well-being. Real-time empathetic coaching sessions with privacy-first architecture and emotional intelligence assessment.",
+        tech: ["React Native", "AI", "Voice"],
+        github: "https://github.com/Akshayykadam/InnerLoop",
+        release: "https://github.com/Akshayykadam/InnerLoop/releases",
+        releaseVersion: "Latest",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>',
+        category: "ai"
     }
 ];
 
 // ========================================
-// DOM ELEMENTS
+// DOM REFERENCES
 // ========================================
-const orbsContainer = document.getElementById('orbs-container');
-const particlesContainer = document.getElementById('particles-container');
-const cursor = document.getElementById('cursor');
-const cursorFollower = document.getElementById('cursor-follower');
+const cursorDot = document.getElementById('cursor-dot');
+const cursorRing = document.getElementById('cursor-ring');
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
+const featuredGrid = document.getElementById('featured-projects');
 const projectsGrid = document.getElementById('projects-grid');
-const filterBtns = document.querySelectorAll('.filter-btn');
+const moreList = document.getElementById('more-list');
 const modal = document.getElementById('project-modal');
 const modalBackdrop = document.getElementById('modal-backdrop');
 const modalClose = document.getElementById('modal-close');
-const modalContent = document.getElementById('modal-content');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalTech = document.getElementById('modal-tech');
 const modalImage = document.getElementById('modal-image');
 const modalGithub = document.getElementById('modal-github');
+const typedRole = document.getElementById('typed-role');
+const gridCanvas = document.getElementById('grid-canvas');
 
 // ========================================
-// EXPERIENCE DATA
+// ANIMATED GRID BACKGROUND
 // ========================================
-const experience = [
-    {
-        start: "March 2022",
-        end: "Present",
-        role: "Software Developer",
-        company: "Wizphys AI",
-        location: "Pune, India",
-        summary: "Building AI-powered Unity applications with real-time video processing.",
-        highlights: [
-            "Developed Unity applications integrated with AI using MediaPipe.",
-            "Implemented robust authentication systems with industry security standards.",
-            "Managed Firebase databases, cloud storage, and real-time updates.",
-            "Optimized cloud storage and media handling for performance.",
-            "Designed and maintained responsive, user-focused interfaces.",
-            "Integrated third-party payment systems and SDKs.",
-            "Documented end-to-end app development for team alignment."
-        ]
-    },
-    {
-        start: "November 2021",
-        end: "March 2022",
-        role: "Junior Game Developer (Freelance)",
-        company: "Cypher Mobile Gaming",
-        location: "Pune, India",
-        summary: "Transitioned into hands-on game development using Unity.",
-        highlights: [
-            "Implemented character controllers, physics systems, and animations.",
-            "Developed interactive gameplay mechanics in Unity.",
-            "Collaborated closely with design and art teams to maintain quality.",
-            "Contributed to engaging mobile game experiences."
-        ]
-    },
-    {
-        start: "July 2020",
-        end: "November 2021",
-        role: "QA Engineer",
-        company: "Jetsynthesys",
-        location: "Pune, India",
-        summary: "Focused on quality assurance for applications across devices and platforms.",
-        highlights: [
-            "Performed game testing including guide and compliance testing.",
-            "Ensured compatibility across multiple devices and platforms.",
-            "Prepared detailed test cases based on requirement specifications.",
-            "Executed structured test plans to validate product stability."
-        ]
+function initGrid() {
+    const ctx = gridCanvas.getContext('2d');
+    let w, h;
+    const CELL = 60;
+    const dots = [];
+
+    function resize() {
+        w = gridCanvas.width = window.innerWidth;
+        h = gridCanvas.height = window.innerHeight;
+        // Rebuild dot grid
+        dots.length = 0;
+        for (let x = 0; x <= w; x += CELL) {
+            for (let y = 0; y <= h; y += CELL) {
+                dots.push({ x, y, phase: Math.random() * Math.PI * 2 });
+            }
+        }
     }
-];
 
-// ========================================
-// TIMELINE RENDERING
-// ========================================
-const timelineContainer = document.getElementById('timeline-container');
+    resize();
+    window.addEventListener('resize', resize);
 
-function renderTimeline() {
-    if (!timelineContainer) return;
+    let time = 0;
+    function draw() {
+        time += 0.015;
+        ctx.clearRect(0, 0, w, h);
 
-    // Create progress line element
-    const progressLine = document.createElement('div');
-    progressLine.className = 'timeline-line-progress';
-    progressLine.id = 'timeline-progress';
-    timelineContainer.appendChild(progressLine);
+        // Draw grid lines
+        ctx.strokeStyle = 'rgba(57, 211, 83, 0.04)';
+        ctx.lineWidth = 0.5;
+        for (let x = 0; x <= w; x += CELL) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, h);
+            ctx.stroke();
+        }
+        for (let y = 0; y <= h; y += CELL) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(w, y);
+            ctx.stroke();
+        }
 
-    experience.forEach((item, index) => {
-        const timelineItem = document.createElement('div');
-        timelineItem.className = 'timeline-item';
+        // Draw glowing dots at intersections
+        dots.forEach(dot => {
+            const pulse = Math.sin(time + dot.phase) * 0.5 + 0.5;
+            const alpha = 0.05 + pulse * 0.15;
+            const radius = 1 + pulse * 1.5;
 
-        // Tags generation from specific words or simple highlight mapping if needed, 
-        // but for now we'll just format the highlights as bullet points
-        const highlightsHtml = item.highlights.map(h => `<li>${h}</li>`).join('');
+            ctx.beginPath();
+            ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(57, 211, 83, ${alpha})`;
+            ctx.fill();
 
-        timelineItem.innerHTML = `
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">${item.start} - ${item.end}</span>
-                <h3 class="timeline-title">${item.role}</h3>
-                <div class="timeline-company">
-                    ${item.company} <span class="location">📍 ${item.location}</span>
-                </div>
-                <p class="timeline-description">${item.summary}</p>
-                <ul class="timeline-highlights" style="list-style-type: disc; padding-left: 20px; margin-top: 10px; color: var(--text-secondary); font-size: 0.9rem;">
-                   ${highlightsHtml}
-                </ul>
-            </div>
-        `;
+            // Glow
+            if (pulse > 0.7) {
+                ctx.beginPath();
+                ctx.arc(dot.x, dot.y, radius + 3, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(57, 211, 83, ${(pulse - 0.7) * 0.15})`;
+                ctx.fill();
+            }
 
-        timelineContainer.appendChild(timelineItem);
-    });
+            // Interactive Cursor Connection
+            if (!isTouchDevice) {
+                const dx = dot.x - mouseX;
+                const dy = dot.y - mouseY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 150) {
+                    const intensity = 1 - (dist / 150);
+                    
+                    // Thicker/brighter dot
+                    ctx.beginPath();
+                    ctx.arc(dot.x, dot.y, radius + intensity * 2, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(57, 211, 83, ${alpha + intensity * 0.5})`;
+                    ctx.fill();
 
-    initTimelineAnimation();
-}
-
-function initTimelineAnimation() {
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -100px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-
-                // Light up dot
-                const dot = entry.target.querySelector('.timeline-dot');
-                if (dot) dot.classList.add('active');
+                    // Connecting line
+                    ctx.beginPath();
+                    ctx.moveTo(dot.x, dot.y);
+                    ctx.lineTo(mouseX, mouseY);
+                    ctx.strokeStyle = `rgba(57, 211, 83, ${intensity * 0.2})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
             }
         });
-    }, observerOptions);
 
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach(item => observer.observe(item));
+        requestAnimationFrame(draw);
+    }
 
-    // Scroll progress for the line
-    window.addEventListener('scroll', updateTimelineProgress);
+    draw();
 }
-
-function updateTimelineProgress() {
-    const timeline = document.getElementById('timeline-container');
-    const progressLine = document.getElementById('timeline-progress');
-
-    if (!timeline || !progressLine) return;
-
-    const rect = timeline.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    // Start drawing when top of timeline hits 50% of screen
-    const startOffset = windowHeight / 2;
-
-    // Calculate how much of the timeline has passed the center of the screen
-    let percentage = (startOffset - rect.top) / rect.height;
-
-    // Clamp between 0 and 1
-    percentage = Math.max(0, Math.min(1, percentage));
-
-    progressLine.style.height = `${percentage * 100}%`;
-}
-
-// Call render
-renderTimeline();
 
 // ========================================
-// CUSTOM CURSOR
+// MAGNETIC CURSOR
 // ========================================
 let mouseX = 0, mouseY = 0;
-let cursorX = 0, cursorY = 0;
-let followerX = 0, followerY = 0;
-
-// Check if device has fine pointer (mouse/trackpad)
+let ringX = 0, ringY = 0;
 const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
 if (!isTouchDevice) {
@@ -396,346 +385,88 @@ if (!isTouchDevice) {
         mouseX = e.clientX;
         mouseY = e.clientY;
     });
-}
 
-function animateCursor() {
-    // Instant cursor movement for no lag
-    cursorX = mouseX;
-    cursorY = mouseY;
+    function animateCursor() {
+        // Dot follows instantly
+        if (cursorDot) {
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+        }
 
-    // Smoother follower loop
-    followerX += (mouseX - followerX) * 0.15;
-    followerY += (mouseY - followerY) * 0.15;
+        // Ring lags behind smoothly
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
 
-    if (cursor) {
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+        if (cursorRing) {
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+        }
+
+        requestAnimationFrame(animateCursor);
     }
 
-    if (cursorFollower) {
-        // Use transform for performance
-        cursorFollower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
-    }
-
-    requestAnimationFrame(animateCursor);
-}
-
-// Start cursor animation
-if (!isTouchDevice) {
     animateCursor();
 
-    // Cursor hover effects
-    const hoverElements = document.querySelectorAll('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link, .download-btn');
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if (cursor) cursor.classList.add('active');
-            if (cursorFollower) cursorFollower.classList.add('active');
-        });
-        el.addEventListener('mouseleave', () => {
-            if (cursor) cursor.classList.remove('active');
-            if (cursorFollower) cursorFollower.classList.remove('active');
-        });
+    // Expand on interactive elements
+    document.addEventListener('mouseover', (e) => {
+        const interactive = e.target.closest('a, button, .btn, .project-card, .skill-tag, .connect-card, .more-item, .featured-card');
+        if (interactive) {
+            cursorDot?.classList.add('active');
+            cursorRing?.classList.add('active');
+        }
     });
-}
 
-// ========================================
-// FLOATING PARTICLES
-// ========================================
-let particles = [];
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
-
-// Update dimensions on resize
-window.addEventListener('resize', () => {
-    windowWidth = window.innerWidth;
-    windowHeight = window.innerHeight;
-    initParticles(); // Re-initialize on resize
-});
-
-function initParticles() {
-    // Clear existing
-    particles.forEach(p => p.element.remove());
-    particles = [];
-
-    // Responsive count: fewer particles on mobile for performance
-    const isMobile = windowWidth < 768;
-    const particleCount = isMobile ? 50 : 100;
-
-    for (let i = 0; i < particleCount; i++) {
-        createParticle();
-    }
-}
-
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-
-    // Random position (pixels)
-    const x = Math.random() * windowWidth;
-    const y = Math.random() * windowHeight;
-
-    // Set initial position using transform for performance
-    particle.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-
-    // Random size variation
-    const size = 2 + Math.random() * 4;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
-
-    // Random animation timing (CSS animation still handles pulse/glow)
-    particle.style.animationDelay = Math.random() * 15 + 's';
-    particle.style.animationDuration = (15 + Math.random() * 20) + 's';
-
-    particlesContainer.appendChild(particle);
-
-    // Store particle data for interaction
-    const mass = 0.8 + Math.random() * 0.7; // Random mass 0.8 - 1.5
-
-    particles.push({
-        element: particle,
-        x: x,
-        y: y,
-        originX: x,
-        originY: y,
-        vx: 0,
-        vy: 0,
-        mass: mass,
-        friction: 0.92 + Math.random() * 0.04,
-        springFactor: 0.003 + Math.random() * 0.002
-    });
-}
-
-function createParticles() {
-    initParticles();
-}
-
-// Interactive particles - respond to clicks & touch
-function handleInteraction(x, y) {
-    createClickRipple(x, y);
-
-    particles.forEach(p => {
-        const dx = p.x - x;
-        const dy = p.y - y;
-        const distSq = dx * dx + dy * dy;
-        const maxDistSq = 500 * 500; // 500px radius
-
-        if (distSq < maxDistSq) {
-            const distance = Math.sqrt(distSq);
-            // Wave propagation delay
-            const delay = distance * 1.5;
-
-            setTimeout(() => {
-                const angle = Math.atan2(dy, dx);
-                // Inverse square law for force, modified by mass
-                const force = (150 * Math.exp(-distance / 200)) / p.mass;
-
-                p.vx += Math.cos(angle) * force;
-                p.vy += Math.sin(angle) * force;
-
-                // Visual feedback
-                p.element.style.transition = 'filter 0.3s ease';
-                p.element.style.filter = 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.8)) text-shadow(0 0 8px rgba(6, 182, 212, 0.8))';
-                // Removed scale transform from here to avoid conflict with physics transform
-
-                setTimeout(() => {
-                    p.element.style.filter = '';
-                }, 600);
-            }, delay);
+    document.addEventListener('mouseout', (e) => {
+        const interactive = e.target.closest('a, button, .btn, .project-card, .skill-tag, .connect-card, .more-item, .featured-card');
+        if (interactive) {
+            cursorDot?.classList.remove('active');
+            cursorRing?.classList.remove('active');
         }
     });
 }
 
-function handleBackgroundClick(e) {
-    if (e.target.closest('a, button, .btn, .project-card, .filter-btn, .service-card, .contact-link, .nav, input, textarea')) {
-        return;
-    }
-    handleInteraction(e.clientX, e.clientY);
-}
-
-// Touch support
-document.addEventListener('touchstart', (e) => {
-    // Only handle single touch on background
-    if (e.touches.length === 1 && !e.target.closest('a, button, input, .card')) {
-        const touch = e.touches[0];
-        handleInteraction(touch.clientX, touch.clientY);
-    }
-}, { passive: true });
-
-
-// Mouse wake effect
-let lastMouseX = 0;
-let lastMouseY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    // Calculate mouse velocity
-    const velX = mouseX - lastMouseX;
-    const velY = mouseY - lastMouseY;
-    const speedSq = velX * velX + velY * velY;
-
-    if (speedSq > 25) { // speed > 5
-        const speed = Math.sqrt(speedSq);
-        particles.forEach(p => {
-            const dx = p.x - mouseX;
-            const dy = p.y - mouseY;
-            const distSq = dx * dx + dy * dy;
-
-            if (distSq < 22500) { // 150px radius
-                const dist = Math.sqrt(distSq);
-                // Drag effect (wake)
-                const force = (5 / Math.max(dist, 10)) * speed * 0.1;
-                p.vx += velX * force / p.mass;
-                p.vy += velY * force / p.mass;
-            }
-        });
-    }
-
-    lastMouseX = mouseX;
-    lastMouseY = mouseY;
-}, { passive: true });
-
-function createClickRipple(x, y) {
-    const ripple = document.createElement('div');
-    ripple.className = 'click-ripple';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    // Ensure ripple doesn't interfere with interaction
-    ripple.style.pointerEvents = 'none';
-    document.body.appendChild(ripple);
-
-    setTimeout(() => ripple.remove(), 800);
-}
-
-// Animate particles using Transform for performance
-function animateParticles() {
-    for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-
-        // Physics Loop (always run to handle gentle movement)
-
-        // Subtle turbulence
-        p.vx += (Math.random() - 0.5) * 0.05;
-        p.vy += (Math.random() - 0.5) * 0.05;
-
-        // Apply velocity
-        p.x += p.vx;
-        p.y += p.vy;
-
-        // Viscous drag
-        p.vx *= p.friction;
-        p.vy *= p.friction;
-
-        // Elastic return force
-        const dx = p.originX - p.x;
-        const dy = p.originY - p.y;
-
-        p.vx += dx * p.springFactor;
-        p.vy += dy * p.springFactor;
-
-        // Apply transform
-        // Use translate3d for GPU acceleration
-        // Round to 1 decimal place for potential slight performance gain in string construction
-        p.element.style.transform = `translate3d(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px, 0)`;
-    }
-
-    requestAnimationFrame(animateParticles);
-}
-
-// Start particle animation loop
-document.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(animateParticles);
-});
-
-// Add click listener
-document.addEventListener('click', handleBackgroundClick);
-
-
 // ========================================
-// FLOATING ORBS
+// TYPING EFFECT
 // ========================================
-function createOrbs() {
-    const orbs = [
-        { class: 'orb-1' },
-        { class: 'orb-2' },
-        { class: 'orb-3' },
-        { class: 'orb-4' }
-    ];
+const roles = [
+    'Game Developer',
+    'Mobile Engineer',
+    'AI Integrator',
+    'Unity Specialist',
+    'React Native Dev',
+    'Problem Solver'
+];
 
-    orbs.forEach(orb => {
-        const div = document.createElement('div');
-        div.className = `orb ${orb.class}`;
-        orbsContainer.appendChild(div);
-    });
-}
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 80;
 
-// ========================================
-// FLOATING JELLYFISH
-// ========================================
-const jellyfishContainer = document.getElementById('jellyfish-container');
+function typeRole() {
+    const current = roles[roleIndex];
 
-function createJellyfish() {
-    const jellyfish = document.createElement('div');
-
-    // Random size
-    const sizes = ['size-sm', '', 'size-lg'];
-    const size = sizes[Math.floor(Math.random() * sizes.length)];
-
-    // Random color
-    const colors = ['', 'color-pink', 'color-cyan'];
-    const color = colors[Math.floor(Math.random() * colors.length)];
-
-    jellyfish.className = `jellyfish ${size} ${color}`;
-
-    // Random starting position
-    const startX = Math.random() * window.innerWidth;
-    jellyfish.style.left = startX + 'px';
-    jellyfish.style.bottom = '-100px';
-
-    // Random drift and duration
-    const driftX = (Math.random() - 0.5) * 300;
-    const duration = 20000 + Math.random() * 15000;
-    const rotation = (Math.random() - 0.5) * 30;
-
-    jellyfish.style.setProperty('--drift-x', driftX + 'px');
-    jellyfish.style.setProperty('--rotation', rotation + 'deg');
-
-    jellyfish.innerHTML = `
-        <div class="jellyfish-body">
-            <div class="jellyfish-tentacles">
-                <div class="tentacle"></div>
-                <div class="tentacle"></div>
-                <div class="tentacle"></div>
-                <div class="tentacle"></div>
-                <div class="tentacle"></div>
-            </div>
-        </div>
-    `;
-
-    jellyfishContainer.appendChild(jellyfish);
-
-    // Animate floating up
-    jellyfish.style.animation = `jellyfishFloat ${duration}ms linear forwards`;
-
-    // Remove after animation completes
-    setTimeout(() => {
-        jellyfish.remove();
-    }, duration);
-}
-
-function startJellyfishSpawner() {
-    // Create initial jellyfish
-    for (let i = 0; i < 3; i++) {
-        setTimeout(() => createJellyfish(), i * 2000);
-    }
-
-    // Spawn new jellyfish periodically
-    setInterval(() => {
-        if (jellyfishContainer && jellyfishContainer.children.length < 6) {
-            createJellyfish();
+    if (!isDeleting) {
+        typedRole.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+            isDeleting = true;
+            typingSpeed = 2000; // pause before deleting
+        } else {
+            typingSpeed = 80 + Math.random() * 40;
         }
-    }, 4000 + Math.random() * 3000);
+    } else {
+        typedRole.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingSpeed = 400;
+        } else {
+            typingSpeed = 40;
+        }
+    }
+
+    setTimeout(typeRole, typingSpeed);
 }
 
 // ========================================
@@ -746,7 +477,6 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking a link
 navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
@@ -755,175 +485,167 @@ navMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ========================================
-// PROJECT CARDS
+// PROJECT RENDERING
 // ========================================
 
-// Cache for project images (folder -> first image path)
-const projectImageCache = {};
-
-// Preload project images by checking available images in each folder
-async function preloadProjectImages() {
-    // This will be populated dynamically as images load
-    // We'll use a simple approach: try the first image and fallback to emoji
-}
-
-function createProjectCard(project) {
-    const card = document.createElement('div');
-    card.className = 'project-card fade-in';
-    card.dataset.category = project.category;
-    card.dataset.id = project.id;
-
-    // Check if project has a folder with images
-    let imageHtml;
-    if (project.folder && project.images && project.images.length > 0) {
-        // Create premium overlapping collage with up to 5 images
-        const imagesToShow = project.images.slice(0, Math.min(5, project.images.length));
-        const folderPath = `assets/projects/${project.folder}`;
-
-        // Positions for each screen in the collage
-        const positions = [
-            'collage-far-left',  // Far left screen
-            'collage-left',      // Left screen
-            'collage-center',    // Center screen (most prominent)
-            'collage-right',     // Right screen
-            'collage-far-right'  // Far right screen
-        ];
-
-        // Build ordered images based on count
-        const orderedImages = [];
-        const count = imagesToShow.length;
-
-        if (count === 1) {
-            orderedImages.push({ img: imagesToShow[0], pos: 'collage-solo' });
-        } else if (count === 2) {
-            orderedImages.push({ img: imagesToShow[0], pos: 'collage-left' });
-            orderedImages.push({ img: imagesToShow[1], pos: 'collage-right' });
-        } else if (count === 3) {
-            orderedImages.push({ img: imagesToShow[1], pos: 'collage-center' });
-            orderedImages.push({ img: imagesToShow[0], pos: 'collage-left' });
-            orderedImages.push({ img: imagesToShow[2], pos: 'collage-right' });
-        } else if (count === 4) {
-            orderedImages.push({ img: imagesToShow[1], pos: 'collage-center' });
-            orderedImages.push({ img: imagesToShow[0], pos: 'collage-left' });
-            orderedImages.push({ img: imagesToShow[2], pos: 'collage-right' });
-            orderedImages.push({ img: imagesToShow[3], pos: 'collage-far-right' });
-        } else if (count >= 5) {
-            orderedImages.push({ img: imagesToShow[2], pos: 'collage-center' });
-            orderedImages.push({ img: imagesToShow[1], pos: 'collage-left' });
-            orderedImages.push({ img: imagesToShow[3], pos: 'collage-right' });
-            orderedImages.push({ img: imagesToShow[0], pos: 'collage-far-left' });
-            orderedImages.push({ img: imagesToShow[4], pos: 'collage-far-right' });
-        }
-
-        const collageItems = orderedImages.map(item =>
-            `<img src="${folderPath}/${item.img}" alt="${project.name}" class="collage-screen ${item.pos}" loading="lazy">`
-        ).join('');
-
-        imageHtml = `
-            <div class="project-image project-collage">
-                ${collageItems}
-                <span class="project-image-placeholder" style="display:none;">${project.emoji}</span>
-            </div>
-        `;
-    } else {
-        // Projects without images - show SVG icon or emoji
+// Build image collage HTML for a project
+function buildCollageHtml(project, containerClass) {
+    if (!project.folder || !project.images || project.images.length === 0) {
         const placeholder = project.icon
             ? `<span class="project-icon-placeholder">${project.icon}</span>`
-            : `<span class="project-image-placeholder">${project.emoji}</span>`;
-        imageHtml = `
-            <div class="project-image">
-                ${placeholder}
-            </div>
-        `;
+            : `<span class="project-icon-placeholder">${project.icon}</span>`;
+        return `<div class="${containerClass}">${placeholder}</div>`;
     }
 
-    // Generate download button HTML if release exists
-    const downloadBtnHtml = project.release ? `
-        <a href="${project.release}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            <span>${project.releaseLabel || 'Download APK'}</span>
-            <span class="version-tag">${project.releaseVersion}</span>
-        </a>
-    ` : '';
+    const images = project.images.slice(0, 5);
+    const folderPath = `assets/projects/${project.folder}`;
+    const positions = ['collage-far-left', 'collage-left', 'collage-center', 'collage-right', 'collage-far-right'];
 
-    card.innerHTML = `
-        ${imageHtml}
-        <div class="project-content">
-            <h3 class="project-title">
-                ${project.name}
+    const ordered = [];
+    const count = images.length;
+
+    if (count === 1) {
+        ordered.push({ img: images[0], pos: 'collage-center' });
+    } else if (count === 2) {
+        ordered.push({ img: images[0], pos: 'collage-left' });
+        ordered.push({ img: images[1], pos: 'collage-right' });
+    } else if (count === 3) {
+        ordered.push({ img: images[1], pos: 'collage-center' });
+        ordered.push({ img: images[0], pos: 'collage-left' });
+        ordered.push({ img: images[2], pos: 'collage-right' });
+    } else if (count === 4) {
+        ordered.push({ img: images[1], pos: 'collage-center' });
+        ordered.push({ img: images[0], pos: 'collage-left' });
+        ordered.push({ img: images[2], pos: 'collage-right' });
+        ordered.push({ img: images[3], pos: 'collage-far-right' });
+    } else if (count >= 5) {
+        ordered.push({ img: images[2], pos: 'collage-center' });
+        ordered.push({ img: images[1], pos: 'collage-left' });
+        ordered.push({ img: images[3], pos: 'collage-right' });
+        ordered.push({ img: images[0], pos: 'collage-far-left' });
+        ordered.push({ img: images[4], pos: 'collage-far-right' });
+    }
+
+    const items = ordered.map(item =>
+        `<img src="${folderPath}/${item.img}" alt="${project.name}" class="collage-screen ${item.pos}" loading="lazy">`
+    ).join('');
+
+    return `<div class="${containerClass}">${items}</div>`;
+}
+
+// Featured projects (full-width)
+function renderFeatured() {
+    const featured = projects.filter(p => p.featured);
+    featured.forEach((project, index) => {
+        const card = document.createElement('div');
+        card.className = 'featured-card reveal';
+        card.style.transitionDelay = `${index * 0.15}s`;
+
+        const imgHtml = buildCollageHtml(project, 'featured-image');
+        const techHtml = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
+
+        card.innerHTML = `
+            ${imgHtml}
+            <div class="featured-info">
+                <h3 class="featured-title scramble">${project.name}</h3>
+                <p class="featured-desc">${project.description}</p>
+                <div class="featured-tech">${techHtml}</div>
+                <a href="${project.github}" target="_blank" rel="noopener" class="featured-link" onclick="event.stopPropagation();">
+                    View on GitHub
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+        `;
+
+        card.addEventListener('click', () => openModal(project));
+        featuredGrid.appendChild(card);
+    });
+}
+
+// Grid projects (3-column) — non-featured with images
+function renderGridProjects() {
+    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0);
+    const show = gridProjects.slice(0, 6);
+
+    show.forEach((project, index) => {
+        const card = document.createElement('div');
+        card.className = 'project-card reveal';
+        card.style.transitionDelay = `${index * 0.1}s`;
+
+        const imgHtml = buildCollageHtml(project, 'project-image');
+        const techHtml = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
+
+        const downloadBtn = project.release ? `
+            <a href="${project.release}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>${project.releaseLabel || 'Download APK'}</span>
+                <span class="version-tag">${project.releaseVersion}</span>
+            </a>
+        ` : '';
+
+        card.innerHTML = `
+            ${imgHtml}
+            <div class="project-content">
+                <h3 class="project-title">
+                    <span class="scramble">${project.name}</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </h3>
+                <p class="project-description">${project.description}</p>
+                <div class="project-tech">${techHtml}</div>
+                ${downloadBtn}
+            </div>
+        `;
+
+        card.addEventListener('click', () => openModal(project));
+        projectsGrid.appendChild(card);
+    });
+}
+
+// More projects (compact 2-column list)
+function renderMoreProjects() {
+    // Everything not featured and not in the main grid
+    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0).slice(0, 6);
+    const gridIds = new Set(gridProjects.map(p => p.id));
+    const featuredIds = new Set(projects.filter(p => p.featured).map(p => p.id));
+
+    const remaining = projects.filter(p => !featuredIds.has(p.id) && !gridIds.has(p.id));
+
+    remaining.forEach((project, index) => {
+        const item = document.createElement('a');
+        item.className = 'more-item reveal';
+        item.href = project.github;
+        item.target = '_blank';
+        item.rel = 'noopener';
+        item.style.transitionDelay = `${index * 0.08}s`;
+
+        const icon = project.icon
+            ? `<div class="more-icon">${project.icon}</div>`
+            : `<div class="more-icon">${project.icon}</div>`;
+
+        const techTags = project.tech.slice(0, 2).map(t => `<span class="tech-tag">${t}</span>`).join('');
+
+        item.innerHTML = `
+            ${icon}
+            <div class="more-info">
+                <span class="more-name scramble">${project.name}</span>
+                <div class="more-tech-tags">${techTags}</div>
+            </div>
+            <span class="more-arrow">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
-            </h3>
-            <p class="project-description">${project.description}</p>
-            <div class="project-tech">
-                ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-            </div>
-            ${downloadBtnHtml}
-        </div>
-    `;
+            </span>
+        `;
 
-    // Handle image load errors - show placeholder if collage fails
-    if (project.folder && project.images && project.images.length > 0) {
-        const collageScreens = card.querySelectorAll('.collage-screen');
-        const placeholder = card.querySelector('.project-image-placeholder');
-        let loadedCount = 0;
-        let errorCount = 0;
-
-        collageScreens.forEach(img => {
-            img.onload = () => {
-                loadedCount++;
-            };
-            img.onerror = () => {
-                errorCount++;
-                img.style.display = 'none';
-                // If all images failed, show placeholder
-                if (errorCount === collageScreens.length) {
-                    placeholder.style.display = 'flex';
-                }
-            };
-        });
-    }
-
-    card.addEventListener('click', () => openModal(project));
-    return card;
-}
-
-function renderProjects(filter = 'all') {
-    projectsGrid.innerHTML = '';
-
-    const filteredProjects = filter === 'all'
-        ? projects
-        : projects.filter(p => p.category === filter);
-
-    filteredProjects.forEach((project, index) => {
-        const card = createProjectCard(project);
-        card.style.animationDelay = `${index * 0.1}s`;
-        projectsGrid.appendChild(card);
+        moreList.appendChild(item);
     });
-
-    // Trigger fade-in animation
-    setTimeout(() => {
-        document.querySelectorAll('.project-card.fade-in').forEach(card => {
-            card.classList.add('visible');
-        });
-    }, 100);
 }
-
-// ========================================
-// FILTER FUNCTIONALITY
-// ========================================
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderProjects(btn.dataset.filter);
-    });
-});
 
 // ========================================
 // MODAL
@@ -937,12 +659,10 @@ function openModal(project) {
     modalTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
     modalGithub.href = project.github;
 
-    // Handle images - show collage layout like project cards
     if (project.folder && project.images && project.images.length > 0) {
         currentImages = project.images.map(img => `assets/projects/${project.folder}/${img}`);
-        currentSlide = Math.floor(currentImages.length / 2); // Start with middle image focused
+        currentSlide = Math.floor(currentImages.length / 2);
 
-        // Create collage with all images visible
         const imageItems = currentImages.map((img, index) =>
             `<img src="${img}" alt="${project.name}" class="modal-collage-img ${index === currentSlide ? 'focused' : ''}" data-index="${index}">`
         ).join('');
@@ -952,34 +672,22 @@ function openModal(project) {
         ).join('');
 
         modalImage.innerHTML = `
-            <div class="modal-collage" id="modal-collage">
-                ${imageItems}
-            </div>
-            <div class="modal-dots-slider" id="modal-dots">
-                ${dots}
-            </div>
+            <div class="modal-collage" id="modal-collage">${imageItems}</div>
+            <div class="modal-dots-slider" id="modal-dots">${dots}</div>
         `;
 
-        // Position images based on focused index
         updateCollagePositions();
 
-        // Add click handlers to dots
         document.querySelectorAll('.modal-dot').forEach(dot => {
-            dot.addEventListener('click', () => {
-                focusImage(parseInt(dot.dataset.index));
-            });
+            dot.addEventListener('click', () => focusImage(parseInt(dot.dataset.index)));
         });
 
-        // Add click handlers to images  
         document.querySelectorAll('.modal-collage-img').forEach(img => {
-            img.addEventListener('click', () => {
-                focusImage(parseInt(img.dataset.index));
-            });
+            img.addEventListener('click', () => focusImage(parseInt(img.dataset.index)));
         });
 
-        // Add scroll/wheel handler to collage container
-        const collageContainer = document.getElementById('modal-collage');
-        collageContainer.addEventListener('wheel', (e) => {
+        const collage = document.getElementById('modal-collage');
+        collage.addEventListener('wheel', (e) => {
             e.preventDefault();
             if (e.deltaY > 0 || e.deltaX > 0) {
                 focusImage(Math.min(currentSlide + 1, currentImages.length - 1));
@@ -987,58 +695,11 @@ function openModal(project) {
                 focusImage(Math.max(currentSlide - 1, 0));
             }
         });
-
-        // Add drag/slide functionality to dots slider (with reduced sensitivity)
-        const dotsSlider = document.getElementById('modal-dots');
-        let isDragging = false;
-        let lastFocusedIndex = currentSlide;
-
-        dotsSlider.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            lastFocusedIndex = currentSlide;
-            e.preventDefault();
-        });
-
-        dotsSlider.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const dot = e.target.closest('.modal-dot');
-            if (dot) {
-                const newIndex = parseInt(dot.dataset.index);
-                // Only change if moved to a different dot
-                if (newIndex !== lastFocusedIndex) {
-                    lastFocusedIndex = newIndex;
-                    focusImage(newIndex);
-                }
-            }
-        });
-
-        dotsSlider.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        dotsSlider.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-        // Touch support for mobile (also with reduced sensitivity)
-        let lastTouchIndex = currentSlide;
-        dotsSlider.addEventListener('touchmove', (e) => {
-            const touch = e.touches[0];
-            const element = document.elementFromPoint(touch.clientX, touch.clientY);
-            if (element && element.classList.contains('modal-dot')) {
-                const newIndex = parseInt(element.dataset.index);
-                if (newIndex !== lastTouchIndex) {
-                    lastTouchIndex = newIndex;
-                    focusImage(newIndex);
-                }
-            }
-        });
     } else {
         currentImages = [];
-        // Show icon for projects without images
         const displayContent = project.icon
             ? `<span class="modal-icon">${project.icon}</span>`
-            : `<span style="font-size: 5rem;">${project.emoji}</span>`;
+            : `<span class="modal-icon">${project.icon}</span>`;
         modalImage.innerHTML = displayContent;
     }
 
@@ -1049,8 +710,6 @@ function openModal(project) {
 function focusImage(index) {
     currentSlide = index;
     updateCollagePositions();
-
-    // Update dots
     document.querySelectorAll('.modal-dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === currentSlide);
     });
@@ -1058,28 +717,16 @@ function focusImage(index) {
 
 function updateCollagePositions() {
     const images = document.querySelectorAll('.modal-collage-img');
-    const count = images.length;
-
     images.forEach((img, i) => {
         img.classList.remove('focused', 'left-1', 'left-2', 'right-1', 'right-2', 'hidden-left', 'hidden-right');
-
         const offset = i - currentSlide;
-
-        if (offset === 0) {
-            img.classList.add('focused');
-        } else if (offset === -1) {
-            img.classList.add('left-1');
-        } else if (offset === -2) {
-            img.classList.add('left-2');
-        } else if (offset === 1) {
-            img.classList.add('right-1');
-        } else if (offset === 2) {
-            img.classList.add('right-2');
-        } else if (offset < -2) {
-            img.classList.add('hidden-left');
-        } else if (offset > 2) {
-            img.classList.add('hidden-right');
-        }
+        if (offset === 0) img.classList.add('focused');
+        else if (offset === -1) img.classList.add('left-1');
+        else if (offset === -2) img.classList.add('left-2');
+        else if (offset === 1) img.classList.add('right-1');
+        else if (offset === 2) img.classList.add('right-2');
+        else if (offset < -2) img.classList.add('hidden-left');
+        else if (offset > 2) img.classList.add('hidden-right');
     });
 }
 
@@ -1090,84 +737,111 @@ function closeModal() {
 
 modalClose.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
-
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        closeModal();
-    }
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
 });
 
 // ========================================
-// SCROLL ANIMATIONS
+// SCROLL REVEAL (staggered)
 // ========================================
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-function initScrollAnimations() {
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
 // ========================================
 // SMOOTH SCROLL
 // ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const navHeight = document.querySelector('.nav').offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+            window.scrollTo({ top: targetPos, behavior: 'smooth' });
         }
     });
 });
 
 // ========================================
-// PARALLAX EFFECT FOR ORBS
+// DATA SCRAMBLE EFFECT
 // ========================================
-let ticking = false;
-
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const scrolled = window.pageYOffset;
-            const orbs = document.querySelectorAll('.orb');
-
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 0.1;
-                orb.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-
-            ticking = false;
+function initScrambleEffect() {
+    const chars = '!<>-_\\\\/[]{}—=+*^?#________';
+    document.querySelectorAll('.scramble').forEach(el => {
+        const originalText = el.innerText;
+        el.addEventListener('mouseenter', () => {
+            let iterations = 0;
+            const interval = setInterval(() => {
+                el.innerText = originalText.split('')
+                    .map((char, i) => {
+                        if (i < iterations) return char;
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join('');
+                if (iterations >= originalText.length) clearInterval(interval);
+                iterations += 1/3;
+            }, 30);
         });
-        ticking = true;
-    }
-});
+    });
+}
+
+// ========================================
+// TERMINAL TYPING EFFECT
+// ========================================
+function initTerminalTyping() {
+    const terminalLine = document.querySelector('.terminal-line');
+    if (!terminalLine) return;
+    
+    const promptHtml = '<span class="t-prompt">$</span> ';
+    const textToType = 'cat skills.json';
+    terminalLine.innerHTML = promptHtml; // Start empty with just prompt
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let i = 0;
+                const interval = setInterval(() => {
+                    terminalLine.innerHTML = promptHtml + textToType.substring(0, i) + '<span class="terminal-cursor">█</span>';
+                    i++;
+                    if (i > textToType.length) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            terminalLine.innerHTML = promptHtml + textToType;
+                        }, 500);
+                    }
+                }, 100); // Typing speed
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    observer.observe(document.querySelector('.terminal-widget'));
+}
 
 // ========================================
 // INITIALIZATION
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    createOrbs();
-    createParticles();
-    startJellyfishSpawner();
-    renderProjects();
-    initScrollAnimations();
+    initGrid();
+    typeRole();
+    renderFeatured();
+    renderGridProjects();
+    renderMoreProjects();
+    initScrambleEffect();
+    initTerminalTyping();
+
+    // Delay scroll reveal init so elements are in DOM
+    requestAnimationFrame(() => {
+        initScrollReveal();
+    });
 });
