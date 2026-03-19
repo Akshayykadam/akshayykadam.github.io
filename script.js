@@ -303,8 +303,14 @@ function initGrid() {
     window.addEventListener('resize', resize);
 
     let time = 0;
-    function draw() {
-        time += 0.015;
+    let lastTime = 0;
+    function draw(timestamp) {
+        if (!lastTime) lastTime = timestamp;
+        const deltaTime = timestamp - lastTime;
+        lastTime = timestamp;
+
+        // 0.015 per frame at 60fps (~16.67ms) is approx deltaTime * 0.0009
+        time += deltaTime * 0.0009;
         ctx.clearRect(0, 0, w, h);
 
         // Draw grid lines
@@ -370,7 +376,7 @@ function initGrid() {
         requestAnimationFrame(draw);
     }
 
-    draw();
+    requestAnimationFrame(draw);
 }
 
 // ========================================
@@ -386,7 +392,12 @@ if (!isTouchDevice) {
         mouseY = e.clientY;
     });
 
-    function animateCursor() {
+    let lastCursorTime = 0;
+    function animateCursor(timestamp) {
+        if (!lastCursorTime) lastCursorTime = timestamp;
+        const deltaTime = timestamp - lastCursorTime;
+        lastCursorTime = timestamp;
+
         // Dot follows instantly
         if (cursorDot) {
             cursorDot.style.left = mouseX + 'px';
@@ -394,8 +405,10 @@ if (!isTouchDevice) {
         }
 
         // Ring lags behind smoothly
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
+        // Original factor was 0.12 at 60fps (16.67ms)
+        const factor = 1 - Math.pow(1 - 0.12, deltaTime / 16.666);
+        ringX += (mouseX - ringX) * factor;
+        ringY += (mouseY - ringY) * factor;
 
         if (cursorRing) {
             cursorRing.style.left = ringX + 'px';
@@ -405,7 +418,7 @@ if (!isTouchDevice) {
         requestAnimationFrame(animateCursor);
     }
 
-    animateCursor();
+    requestAnimationFrame(animateCursor);
 
     // Expand on interactive elements
     document.addEventListener('mouseover', (e) => {
