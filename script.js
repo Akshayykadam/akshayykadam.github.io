@@ -688,6 +688,78 @@ function renderMoreProjects() {
 }
 
 // ========================================
+// UNITY PLUGINS
+// ========================================
+const unityPlugins = [
+    {
+        name: "Devanagari Text Engine",
+        description: "Unified Hindi, Marathi & Kruti Dev text rendering for Unity. Solves broken conjuncts (क्ष, त्र), detached matras, and missing ligatures with full Unicode and Legacy workflow support.",
+        tech: ["Unity", "C#", "Unicode"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>'
+    },
+    {
+        name: "WebView Bridge Pro",
+        description: "Native performance. Zero lag. Total control. A seamless bridge between Unity and native WebView components for Android & iOS.",
+        tech: ["Unity", "Android", "iOS"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M2 13h20"/></svg>'
+    },
+    {
+        name: "Advanced Notification Engine",
+        description: "A production-ready, cross-platform notification system — schedule local & push notifications with deep linking, quiet hours, inbox history, and in-app overlays.",
+        tech: ["Unity", "Push Notifications"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>'
+    },
+    {
+        name: "Native Picker Pro",
+        description: "Production-ready native UI picker bridge for Android & iOS. Date pickers, time pickers, and custom selection wheels with full Unity integration.",
+        tech: ["Unity", "Native UI"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18"/><path d="M3 12h18"/><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6M9 12h6M9 15h3"/></svg>'
+    },
+    {
+        name: "UnityLink Chat",
+        description: "WhatsApp-style real-time chat for Unity. Drop-in plugin with 1-to-1 messaging, groups, media sharing, reactions, and E2E encryption. Built on Firebase.",
+        tech: ["Unity", "Firebase", "Chat"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>'
+    },
+    {
+        name: "CrossHealth",
+        description: "Unity plugin for Apple HealthKit (iOS) & Android Health Connect. A unified C# API to read health & fitness data — no Swift, Kotlin, or native code required.",
+        tech: ["Unity", "HealthKit", "Health Connect"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/><path d="M3.5 12h5l2-3 3 6 2-3h4.5"/></svg>'
+    },
+    {
+        name: "Arabic RTL Text Engine",
+        description: "A comprehensive Unity Package (UPM) providing full Arabic (RTL) and English (LTR) text support for Unity applications with proper glyph shaping.",
+        tech: ["Unity", "C#", "RTL"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7V4h-16v3"/><path d="M9 20h6"/><path d="M12 4v16"/><path d="M17 8l3-1M7 8l-3-1"/></svg>'
+    }
+];
+
+function renderPlugins() {
+    const grid = document.getElementById('plugins-grid');
+    if (!grid) return;
+
+    unityPlugins.forEach((plugin, index) => {
+        const card = document.createElement('div');
+        card.className = 'plugin-card';
+        card.style.transitionDelay = `${index * 0.08}s`;
+
+        const techTags = plugin.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
+
+        card.innerHTML = `
+            <div class="plugin-icon">${plugin.icon}</div>
+            <div class="plugin-info">
+                <div class="plugin-name">${plugin.name}</div>
+                <div class="plugin-desc">${plugin.description}</div>
+                <div class="plugin-tech-tags">${techTags}</div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+// ========================================
 // MODAL
 // ========================================
 let currentSlide = 0;
@@ -713,7 +785,15 @@ function openModal(project) {
 
         modalImage.innerHTML = `
             <div class="modal-collage" id="modal-collage">${imageItems}</div>
-            <div class="modal-dots-slider" id="modal-dots">${dots}</div>
+            <div class="modal-slider-controls">
+                <button class="modal-nav-btn" id="modal-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="modal-dots-slider" id="modal-dots">${dots}</div>
+                <button class="modal-nav-btn" id="modal-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
         `;
 
         updateCollagePositions();
@@ -724,6 +804,14 @@ function openModal(project) {
 
         document.querySelectorAll('.modal-collage-img').forEach(img => {
             img.addEventListener('click', () => focusImage(parseInt(img.dataset.index)));
+        });
+
+        document.getElementById('modal-prev').addEventListener('click', () => {
+            focusImage(Math.max(currentSlide - 1, 0));
+        });
+
+        document.getElementById('modal-next').addEventListener('click', () => {
+            focusImage(Math.min(currentSlide + 1, currentImages.length - 1));
         });
 
         const collage = document.getElementById('modal-collage');
@@ -778,7 +866,14 @@ function closeModal() {
 modalClose.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    if (!modal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft' && currentImages.length > 0) {
+        focusImage(Math.max(currentSlide - 1, 0));
+    }
+    if (e.key === 'ArrowRight' && currentImages.length > 0) {
+        focusImage(Math.min(currentSlide + 1, currentImages.length - 1));
+    }
 });
 
 // ========================================
@@ -800,7 +895,7 @@ function initScrollReveal() {
 // ========================================
 // SMOOTH SCROLL
 // ========================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([target="_blank"])').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -877,6 +972,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFeatured();
     renderGridProjects();
     renderMoreProjects();
+    renderPlugins();
     initScrambleEffect();
     initTerminalTyping();
 
