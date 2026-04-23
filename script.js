@@ -3,6 +3,20 @@
 // ========================================
 const projects = [
     {
+        id: 23,
+        name: "Pixio",
+        folder: "Pixio",
+        images: ["Simulator Screenshot - iPhone 16 Pro - 2026-04-22 at 13.05.17.png", "Simulator Screenshot - iPhone 16 Pro - 2026-04-22 at 13.03.21.png", "Simulator Screenshot - iPhone 16 Pro - 2026-04-22 at 13.13.38.png", "Simulator Screenshot - iPhone 16 Pro - 2026-04-22 at 13.13.19.png", "Simulator Screenshot - iPhone 16 Pro - 2026-04-22 at 12.19.13.png"],
+        description: "A premium, open-source wallpaper app with AMOLED Pure Black design and dynamic Glassmorphism UI. Features Spotlight discovery, Mood-based color search, one-tap wallpaper setting, and high-res downloads — all powered by the Pexels API.",
+        tech: ["React Native", "Expo", "Pexels API"],
+        github: "https://github.com/Akshayykadam/Pixio",
+        release: "https://github.com/Akshayykadam/Pixio/releases",
+        releaseVersion: "Latest",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/><path d="M14 14l3-3 4 4"/></svg>',
+        category: "mobile",
+        featured: true
+    },
+    {
         id: 18,
         name: "TrainIQ",
         folder: "TrainIQ",
