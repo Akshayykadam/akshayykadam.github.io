@@ -115,7 +115,9 @@ a, button, .btn, .project-card, .skill-tag, .connect-card, .more-item, .featured
     z-index: 99999;
     transform: translate(-50%, -50%);
     transition: width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
-    will-change: left, top;
+    will-change: transform;
+    top: 0;
+    left: 0;
 }
 
 /* Crosshair lines */
@@ -170,8 +172,10 @@ a, button, .btn, .project-card, .skill-tag, .connect-card, .more-item, .featured
     transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                 opacity 0.3s ease;
-    will-change: left, top;
+    will-change: transform;
     opacity: 0.5;
+    top: 0;
+    left: 0;
 }
 
 /* Top-left bracket */

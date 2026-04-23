@@ -379,8 +379,9 @@ function initGrid() {
             if (!isTouchDevice) {
                 const dx = dot.x - mouseX;
                 const dy = dot.y - mouseY;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 150) {
+                const distSq = dx * dx + dy * dy;
+                if (distSq < 22500) { // 150 * 150 = 22500
+                    const dist = Math.sqrt(distSq);
                     const intensity = 1 - (dist / 150);
                     
                     // Thicker/brighter dot
@@ -427,19 +428,16 @@ if (!isTouchDevice) {
 
         // Dot follows instantly
         if (cursorDot) {
-            cursorDot.style.left = mouseX + 'px';
-            cursorDot.style.top = mouseY + 'px';
+            cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
         }
 
         // Ring lags behind smoothly
-        // Original factor was 0.12 at 60fps (16.67ms)
         const factor = 1 - Math.pow(1 - 0.12, deltaTime / 16.666);
         ringX += (mouseX - ringX) * factor;
         ringY += (mouseY - ringY) * factor;
 
         if (cursorRing) {
-            cursorRing.style.left = ringX + 'px';
-            cursorRing.style.top = ringY + 'px';
+            cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
         }
 
         requestAnimationFrame(animateCursor);
@@ -576,6 +574,7 @@ function buildCollageHtml(project, containerClass) {
 // Featured projects (full-width)
 function renderFeatured() {
     const featured = projects.filter(p => p.featured);
+    const fragment = document.createDocumentFragment();
     featured.forEach((project, index) => {
         const card = document.createElement('div');
         card.className = 'featured-card reveal';
@@ -598,8 +597,9 @@ function renderFeatured() {
         `;
 
         card.addEventListener('click', () => openModal(project));
-        featuredGrid.appendChild(card);
+        fragment.appendChild(card);
     });
+    featuredGrid.appendChild(fragment);
 }
 
 // Grid projects (3-column) — non-featured with images
@@ -607,6 +607,7 @@ function renderGridProjects() {
     const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0);
     const show = gridProjects.slice(0, 9);
 
+    const fragment = document.createDocumentFragment();
     show.forEach((project, index) => {
         const card = document.createElement('div');
         card.className = 'project-card reveal';
@@ -643,8 +644,9 @@ function renderGridProjects() {
         `;
 
         card.addEventListener('click', () => openModal(project));
-        projectsGrid.appendChild(card);
+        fragment.appendChild(card);
     });
+    projectsGrid.appendChild(fragment);
 }
 
 // More projects (compact 2-column list)
@@ -656,6 +658,7 @@ function renderMoreProjects() {
 
     const remaining = projects.filter(p => !featuredIds.has(p.id) && !gridIds.has(p.id));
 
+    const fragment = document.createDocumentFragment();
     remaining.forEach((project, index) => {
         const item = document.createElement('a');
         item.className = 'more-item reveal';
@@ -683,8 +686,9 @@ function renderMoreProjects() {
             </span>
         `;
 
-        moreList.appendChild(item);
+        fragment.appendChild(item);
     });
+    moreList.appendChild(fragment);
 }
 
 // ========================================
@@ -739,6 +743,7 @@ function renderPlugins() {
     const grid = document.getElementById('plugins-grid');
     if (!grid) return;
 
+    const fragment = document.createDocumentFragment();
     unityPlugins.forEach((plugin, index) => {
         const card = document.createElement('div');
         card.className = 'plugin-card';
@@ -755,8 +760,9 @@ function renderPlugins() {
             </div>
         `;
 
-        grid.appendChild(card);
+        fragment.appendChild(card);
     });
+    grid.appendChild(fragment);
 }
 
 // ========================================
