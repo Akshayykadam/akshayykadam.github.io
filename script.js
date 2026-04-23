@@ -13,8 +13,7 @@ const projects = [
         release: "https://github.com/Akshayykadam/Pixio/releases",
         releaseVersion: "Latest",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/><path d="M14 14l3-3 4 4"/></svg>',
-        category: "mobile",
-        featured: true
+        category: "mobile"
     },
     {
         id: 18,
@@ -27,8 +26,7 @@ const projects = [
         release: "https://github.com/Akshayykadam/TrainIQ/releases",
         releaseVersion: "Latest",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 2.5-1.5 4.5-3 6l-1 4H9l-1-4c-1.5-1.5-3-3.5-3-6a7 7 0 017-7z"/><path d="M9 19h6M10 22h4"/></svg>',
-        category: "mobile",
-        featured: true
+        category: "mobile"
     },
     {
         id: 2,
@@ -54,8 +52,7 @@ const projects = [
         release: "https://github.com/Akshayykadam/HalloDeutsch/releases",
         releaseVersion: "Latest",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 14.5A2.5 2.5 0 016.5 12H20"/><path d="M4 9.5A2.5 2.5 0 016.5 7H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20"/></svg>',
-        category: "mobile",
-        featured: true
+        category: "mobile"
     },
     {
         id: 9,
@@ -232,6 +229,8 @@ const projects = [
     {
         id: 19,
         name: "GitHub Contributions Wallpaper",
+        folder: "GitHub Contributions Live Wallpaper",
+        images: ["1.png", "2.png", "3.png"],
         description: "A premium Android Live Wallpaper that brings your GitHub contributions graph right to your home screen. Beautiful, real-time visualization of your coding activity.",
         tech: ["Android", "Kotlin", "Live Wallpaper"],
         github: "https://github.com/Akshayykadam/GitHub-Contributions-Live-Wallpaper",
@@ -243,11 +242,14 @@ const projects = [
     {
         id: 20,
         name: "OpenCity3D Engine",
+        folder: "GeoCity3D — OpenStreetMap 3D City Generator",
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
         description: "Generate real-world 3D cities in Unity directly from OpenStreetMap data with a single click. No external tools or complex parsing required.",
         tech: ["Unity", "C#", "OpenStreetMap"],
         github: "https://github.com/Akshayykadam/OpenCity3D-Engine",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6M9 9h0M15 9h0M9 13h0M15 13h0"/></svg>',
-        category: "game"
+        category: "game",
+        featured: true
     },
     {
         id: 21,
@@ -268,6 +270,17 @@ const projects = [
         releaseVersion: "Latest",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>',
         category: "ai"
+    },
+    {
+        id: 24,
+        name: "ChopLight",
+        description: "A super lightweight, headless Android utility that toggles your flashlight with a quick double karate chop gesture. No UI, no bloat — just ~400KB of pure Kotlin running as a battery-optimized foreground service.",
+        tech: ["Android", "Kotlin"],
+        github: "https://github.com/Akshayykadam/ChopLight",
+        release: "https://github.com/Akshayykadam/ChopLight/releases",
+        releaseVersion: "1.0.0",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/><path d="M12 8v4l2 2"/></svg>',
+        category: "mobile"
     }
 ];
 
@@ -592,7 +605,7 @@ function renderFeatured() {
 // Grid projects (3-column) — non-featured with images
 function renderGridProjects() {
     const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0);
-    const show = gridProjects.slice(0, 6);
+    const show = gridProjects.slice(0, 9);
 
     show.forEach((project, index) => {
         const card = document.createElement('div');
@@ -637,7 +650,7 @@ function renderGridProjects() {
 // More projects (compact 2-column list)
 function renderMoreProjects() {
     // Everything not featured and not in the main grid
-    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0).slice(0, 6);
+    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0).slice(0, 9);
     const gridIds = new Set(gridProjects.map(p => p.id));
     const featuredIds = new Set(projects.filter(p => p.featured).map(p => p.id));
 
