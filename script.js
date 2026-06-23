@@ -3,6 +3,200 @@
 // ========================================
 const projects = [
     {
+        id: 25,
+        name: "RideConnect for KTM",
+        badge: "LATEST",
+        folder: "RideConnect",
+        tagline: "// RIDE CONNECTED. NAVIGATE SEAMLESSLY.",
+        images: ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png"],
+        description: "Turn-by-turn navigation and real-time motorcycle telemetry streamed directly to your KTM TFT dashboard via Bluetooth Low Energy.",
+        shortDescription: "Turn-by-turn navigation and real-time motorcycle telemetry streamed directly to your KTM TFT dashboard via Bluetooth Low Energy.",
+        longDescription: `
+            <div class="ktm-project-details">
+                <div class="ktm-tagline">// RIDE CONNECTED. NAVIGATE SEAMLESSLY.</div>
+                <p class="ktm-subheading">Turn-by-turn navigation and real-time motorcycle telemetry streamed directly to your KTM TFT dashboard via Bluetooth Low Energy.</p>
+                
+                <div class="ktm-actions-row">
+                    <a href="https://drive.google.com/file/d/1Litx1FEtHT1OJNvyr_se3pSEbeEzf-DZ/view?usp=sharing" target="_blank" class="btn btn-primary ktm-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download Android APK</span>
+                    </a>
+                    <button class="btn btn-ghost ktm-btn-secondary ktm-more-info-btn" onclick="document.querySelector('.ktm-expanded-details').classList.add('active'); document.querySelector('.modal-left').style.display='none'; document.querySelector('.modal-layout').style.gridTemplateColumns='1fr'; this.style.display='none'; return false;">
+                        <span>More Info</span>
+                    </button>
+                </div>
+
+                <div class="ktm-expanded-details">
+                    <h4 class="ktm-section-title">⚡ Main Value Propositions (The Hook)</h4>
+                <div class="ktm-grid">
+                    <div class="ktm-card">
+                        <h5>🗺️ Turn-by-Turn Navigation on Your Dash</h5>
+                        <p>No more mounting expensive GPS units or risking your phone's camera sensors on vibrating handlebars. RideConnect captures turn instructions from Google Maps, Waze, OsmAnd, Kurviger, and Calimoto, encrypts them, and displays them right on your motorcycle's dashboard.</p>
+                    </div>
+                    <div class="ktm-card">
+                        <h5>📊 Real-Time Engine & Bike Telemetry</h5>
+                        <p>Get live vehicle stats streamed straight to your phone. Monitor Engine RPM, Battery Voltage, Speed, Gear position, Coolant temperature, and Odometer updates in real-time, powered by the bike's Bosch telemetry services.</p>
+                    </div>
+                    <div class="ktm-card">
+                        <h5>🌦️ Smart Weather Alerts</h5>
+                        <p>Ride prepared. With integrated OpenWeatherMap updates, RideConnect monitors weather at your GPS coordinates and flashes live alerts on your TFT dashboard if unfavorable weather or extreme temperatures lie ahead.</p>
+                    </div>
+                    <div class="ktm-card">
+                        <h5>🚴 GPX Route Import & Ride Recording</h5>
+                        <p>Record your rides with precise GPS tracking (speed, heading, altitude, and distance) and export them to standard GPX 1.1 format to share on Strava or Komoot. Import GPX routes to preview them with gorgeous elevation and speed profile charts.</p>
+                    </div>
+                </div>
+
+                <h4 class="ktm-section-title">🛠️ Feature Showcase</h4>
+                <table class="ktm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Multi-App Launcher</strong></td>
+                            <td>Choose between your favorite navigation providers (Google Maps, Waze, Organic Maps, and more) from a KTM-themed interface.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offline-Ready Maps</strong></td>
+                            <td>View your recorded rides and GPX routes offline using native interactive OpenStreetMap integration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Secure Handshake</strong></td>
+                            <td>Features a hardened authentication handshake using AES-CBC encryption to protect navigation data transmission.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interactive Charts</strong></td>
+                            <td>View elevation profiles and speed charts with detail-inspecting crosshairs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heartbeat Keepalive</strong></td>
+                            <td>Solid background connection service that handles the bike's 1.0s periodic challenge so the link never drops.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>KTM Dark Theme</strong></td>
+                            <td>Premium interface designed using KTM's signature Green (#39d353) and Matte Black (#0A0A0A) aesthetic.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="ktm-section-title">🏍️ Supported Motorcycles</h4>
+                <div class="ktm-bikes-grid">
+                    <div class="ktm-bike-status active">
+                        <span class="status-badge active">Phase 1 - Supported</span>
+                        <ul>
+                            <li><strong>KTM 390 Adventure (Gen 3)</strong></li>
+                            <li><strong>KTM Duke 390 (Gen 3)</strong></li>
+                        </ul>
+                    </div>
+                    <div class="ktm-bike-status coming-soon">
+                        <span class="status-badge coming">Phase 2 - Coming Soon</span>
+                        <ul>
+                            <li>KTM 250 Adventure & Duke (Gen 3)</li>
+                            <li>KTM 890 Adventure (Gen 3)</li>
+                            <li>Husqvarna Svartpilen 401 (Gen 3)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="ktm-section-title" id="setup-guide">📖 Step-by-Step Rider Setup Guide</h4>
+                
+                <div class="ktm-flow-diagram">
+                    <div class="flow-step">
+                        <span class="step-num">1</span>
+                        <span class="step-txt">Install APK</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <span class="step-num">2</span>
+                        <span class="step-txt">Grant Perms</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <span class="step-num">3</span>
+                        <span class="step-txt">Bike Bluetooth</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <span class="step-num">4</span>
+                        <span class="step-txt">Pair Phone</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <span class="step-num">5</span>
+                        <span class="step-txt">Start Nav</span>
+                    </div>
+                </div>
+
+                <div class="ktm-setup-steps">
+                    <div class="setup-step">
+                        <h6>Step 1: Install the App</h6>
+                        <p>Download the <code>app-release.apk</code> directly from this website. Open the installer on your Android device and tap <strong>Install</strong>. If Google Play Protect displays a warning, select <strong>Scan app</strong> to verify and continue.</p>
+                    </div>
+                    <div class="setup-step">
+                        <h6>Step 2: Grant Permissions (Critical)</h6>
+                        <p>To communicate with the bike and parse navigation instructions, the app requires:</p>
+                        <ul>
+                            <li><strong>Bluetooth Scan & Connect:</strong> To find and communicate with the motorcycle.</li>
+                            <li><strong>Location Access:</strong> Required by Android for BLE device discovery.</li>
+                            <li><strong>Notification Access (CRITICAL):</strong> Enable this manually in your phone's settings: <code>Settings ➔ Apps ➔ Special app access ➔ Notification access ➔ Enable RideConnect</code>. Without this, the app cannot capture turn prompts.</li>
+                        </ul>
+                    </div>
+                    <div class="setup-step">
+                        <h6>Step 3: Turn on Motorcycle Bluetooth</h6>
+                        <ol>
+                            <li>Turn on the motorcycle ignition.</li>
+                            <li>Use the handlebar controls to go to the TFT <strong>Settings</strong> menu.</li>
+                            <li>Select <strong>Connectivity</strong>, ensure it is <strong>On</strong>, and select <strong>Bluetooth</strong>.</li>
+                            <li>Choose the phone/app registration option. When prompted: <em>"Do you want to register a new KTM app on this bike?"</em>, press the <strong>confirm/proceed arrow</strong> on the handlebar.</li>
+                        </ol>
+                    </div>
+                    <div class="setup-step">
+                        <h6>Step 4: Scan and Pair</h6>
+                        <ol>
+                            <li>Open the <strong>RideConnect</strong> app and navigate to the <strong>Connection</strong> screen.</li>
+                            <li>Tap <strong>Scan</strong> and select your KTM motorcycle.</li>
+                            <li>Confirm the pairing requests on both your phone and the TFT screen.</li>
+                            <li>The dashboard will show a phone connection icon, and the app status will display <strong>Connected & Ready</strong>.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h4 class="ktm-section-title">🔒 Security & Privacy by Design</h4>
+                <p>We respect your privacy. Unlike other motorcycle connectivity apps:</p>
+                <ul>
+                    <li><strong>No Cloud Accounts Required:</strong> RideConnect works entirely locally on your device.</li>
+                    <li><strong>Local Databases:</strong> All ride history, GPS breadcrumbs, and paired devices are stored locally on your phone in a secure Room database.</li>
+                    <li><strong>Encrypted Communication:</strong> The navigation characteristics are encrypted via AES-CBC using session keys derived from SHA-512 hashes to ensure safe transmission.</li>
+                </ul>
+                </div>
+            </div>
+        `,
+        tech: ["Android", "Kotlin", "BLE", "Security (AES)", "OSM"],
+        github: "https://github.com/Akshayykadam/RideConnect-KTM",
+        release: "https://drive.google.com/file/d/1Litx1FEtHT1OJNvyr_se3pSEbeEzf-DZ/view?usp=sharing",
+        releaseVersion: "Latest",
+        releaseLabel: "Download APK",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/><path d="M14 14l3-3 4 4"/></svg>',
+        category: "mobile",
+        featured: true
+    },
+    {
+        id: 20,
+        name: "OpenCity3D Engine",
+        folder: "GeoCity3D — OpenStreetMap 3D City Generator",
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
+        description: "Generate real-world 3D cities in Unity directly from OpenStreetMap data with a single click. No external tools or complex parsing required.",
+        tech: ["Unity", "C#", "OpenStreetMap"],
+        github: "https://github.com/Akshayykadam/OpenCity3D-Engine",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6M9 9h0M15 9h0M9 13h0M15 13h0"/></svg>',
+        category: "game",
+        featured: true
+    },
+    {
         id: 23,
         name: "Pixio",
         folder: "Pixio",
@@ -240,18 +434,6 @@ const projects = [
         category: "mobile"
     },
     {
-        id: 20,
-        name: "OpenCity3D Engine",
-        folder: "GeoCity3D — OpenStreetMap 3D City Generator",
-        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
-        description: "Generate real-world 3D cities in Unity directly from OpenStreetMap data with a single click. No external tools or complex parsing required.",
-        tech: ["Unity", "C#", "OpenStreetMap"],
-        github: "https://github.com/Akshayykadam/OpenCity3D-Engine",
-        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6M9 9h0M15 9h0M9 13h0M15 13h0"/></svg>',
-        category: "game",
-        featured: true
-    },
-    {
         id: 21,
         name: "UnityLink Chat",
         description: "Drop-in Unity chat plugin with 1-to-1 messaging, groups, media sharing, reactions, and E2E encryption. Built on Firebase, works on Android, iOS, and Desktop.",
@@ -302,6 +484,12 @@ const modalDescription = document.getElementById('modal-description');
 const modalTech = document.getElementById('modal-tech');
 const modalImage = document.getElementById('modal-image');
 const modalGithub = document.getElementById('modal-github');
+const lightbox = document.getElementById('image-lightbox');
+const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxImg = document.getElementById('lightbox-img');
 const typedRole = document.getElementById('typed-role');
 const gridCanvas = document.getElementById('grid-canvas');
 
@@ -583,18 +771,38 @@ function renderFeatured() {
         const imgHtml = buildCollageHtml(project, 'featured-image');
         const techHtml = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
 
-        card.innerHTML = `
-            ${imgHtml}
-            <div class="featured-info">
-                <h3 class="featured-title scramble">${project.name}</h3>
-                <p class="featured-desc">${project.description}</p>
-                <div class="featured-tech">${techHtml}</div>
-                <a href="${project.github}" target="_blank" rel="noopener" class="featured-link" onclick="event.stopPropagation();">
-                    View on GitHub
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                </a>
-            </div>
-        `;
+        const badgeHtml = project.badge ? ` <span class="featured-badge">${project.badge}</span>` : '';
+
+        if (project.tagline) {
+            card.innerHTML = `
+                ${badgeHtml}
+                ${imgHtml}
+                <div class="featured-info">
+                    <h3 class="featured-title scramble">${project.name}</h3>
+                    <div class="featured-tagline" style="font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; letter-spacing: 0.05em; text-shadow: 0 0 10px var(--accent-glow);">${project.tagline}</div>
+                    <p class="featured-desc" style="margin-bottom: 1.5rem;">${project.shortDescription || project.description}</p>
+                    <div class="featured-actions" style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="https://drive.google.com/file/d/1Litx1FEtHT1OJNvyr_se3pSEbeEzf-DZ/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary" onclick="event.stopPropagation();" style="font-size: 0.75rem; padding: 0.5rem 1.2rem; background: var(--accent); color: #000; border: none; font-weight: bold; box-shadow: 0 0 10px var(--accent-glow); cursor: none;">
+                            <span>Download APK</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        } else {
+            card.innerHTML = `
+                ${badgeHtml}
+                ${imgHtml}
+                <div class="featured-info">
+                    <h3 class="featured-title scramble">${project.name}</h3>
+                    <p class="featured-desc">${project.shortDescription || project.description}</p>
+                    <div class="featured-tech">${techHtml}</div>
+                    <a href="${project.github}" target="_blank" rel="noopener" class="featured-link" onclick="event.stopPropagation();">
+                        View on GitHub
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+            `;
+        }
 
         card.addEventListener('click', () => openModal(project));
         fragment.appendChild(card);
@@ -637,7 +845,7 @@ function renderGridProjects() {
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
                 </h3>
-                <p class="project-description">${project.description}</p>
+                <p class="project-description">${project.shortDescription || project.description}</p>
                 <div class="project-tech">${techHtml}</div>
                 ${downloadBtn}
             </div>
@@ -773,11 +981,17 @@ let currentImages = [];
 
 function openModal(project) {
     modalTitle.textContent = project.name;
-    modalDescription.textContent = project.description;
+    modalDescription.innerHTML = project.longDescription || project.description;
     modalTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
     modalGithub.href = project.github;
 
-    if (project.folder && project.images && project.images.length > 0) {
+    const modalLayout = document.querySelector('.modal-layout');
+    const modalLeft = document.querySelector('.modal-left');
+
+    if (project.folder && project.images && project.images.length > 0 && !project.hideModalImages) {
+        modalLayout.style.gridTemplateColumns = '1fr 1fr';
+        modalLeft.style.display = 'flex';
+
         currentImages = project.images.map(img => `assets/projects/${project.folder}/${img}`);
         currentSlide = Math.floor(currentImages.length / 2);
 
@@ -809,7 +1023,14 @@ function openModal(project) {
         });
 
         document.querySelectorAll('.modal-collage-img').forEach(img => {
-            img.addEventListener('click', () => focusImage(parseInt(img.dataset.index)));
+            img.addEventListener('click', () => {
+                const idx = parseInt(img.dataset.index);
+                if (idx === currentSlide) {
+                    openLightbox(idx);
+                } else {
+                    focusImage(idx);
+                }
+            });
         });
 
         document.getElementById('modal-prev').addEventListener('click', () => {
@@ -830,11 +1051,9 @@ function openModal(project) {
             }
         });
     } else {
+        modalLayout.style.gridTemplateColumns = '1fr';
+        modalLeft.style.display = 'none';
         currentImages = [];
-        const displayContent = project.icon
-            ? `<span class="modal-icon">${project.icon}</span>`
-            : `<span class="modal-icon">${project.icon}</span>`;
-        modalImage.innerHTML = displayContent;
     }
 
     modal.classList.add('active');
@@ -869,9 +1088,102 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
+// Lightbox controller logic
+let lightboxActiveIndex = 0;
+
+function openLightbox(index) {
+    lightboxActiveIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('active');
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+}
+
+function updateLightboxImage() {
+    if (currentImages && currentImages[lightboxActiveIndex]) {
+        lightboxImg.src = currentImages[lightboxActiveIndex];
+        lightboxImg.alt = "Screenshot " + (lightboxActiveIndex + 1);
+    }
+}
+
+function nextLightboxImage() {
+    if (currentImages.length > 0) {
+        lightboxActiveIndex = (lightboxActiveIndex + 1) % currentImages.length;
+        updateLightboxImage();
+        focusImage(lightboxActiveIndex);
+    }
+}
+
+function prevLightboxImage() {
+    if (currentImages.length > 0) {
+        lightboxActiveIndex = (lightboxActiveIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightboxImage();
+        focusImage(lightboxActiveIndex);
+    }
+}
+
 modalClose.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxBackdrop.addEventListener('click', closeLightbox);
+lightboxPrev.addEventListener('click', prevLightboxImage);
+lightboxNext.addEventListener('click', nextLightboxImage);
+
+// Swipe gesture support on touch screens (Horizontal to navigate, Vertical to close)
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    
+    const swipeThresholdX = 50;
+    const swipeThresholdY = 80;
+    
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // Horizontal swipe -> navigate
+        if (diffX < -swipeThresholdX) {
+            nextLightboxImage();
+        } else if (diffX > swipeThresholdX) {
+            prevLightboxImage();
+        }
+    } else {
+        // Vertical swipe -> close
+        if (Math.abs(diffY) > swipeThresholdY) {
+            closeLightbox();
+        }
+    }
+}, { passive: true });
+
 document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+            return;
+        }
+        if (e.key === 'ArrowLeft') {
+            prevLightboxImage();
+            return;
+        }
+        if (e.key === 'ArrowRight') {
+            nextLightboxImage();
+            return;
+        }
+    }
+
     if (!modal.classList.contains('active')) return;
     if (e.key === 'Escape') closeModal();
     if (e.key === 'ArrowLeft' && currentImages.length > 0) {
