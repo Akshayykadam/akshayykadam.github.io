@@ -1834,8 +1834,8 @@ button,
     .modal-left {
         order: 1;
         width: 100% !important;
-        min-height: 220px;
-        padding: 1.25rem;
+        min-height: 380px;
+        padding: 1rem;
     }
 
     .modal-title {
@@ -1884,12 +1884,12 @@ button,
     }
 
     .modal-collage {
-        height: 200px;
+        height: 320px;
     }
 
     .modal-collage-img {
-        height: 75%;
-        max-width: 70%;
+        height: 85%;
+        max-width: 80%;
     }
 
     .modal-slider-controls {
