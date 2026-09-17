@@ -900,6 +900,74 @@ button,
     overflow: hidden;
 }
 
+/* 2x2 Screenshot Banner Layout for Web/Desktop/Engine Projects */
+.banner-grid-2x2-container {
+    background: #0b0d10;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-image.banner-grid-2x2-container {
+    height: 200px;
+    padding: 8px;
+}
+
+.featured-image.banner-grid-2x2-container {
+    min-height: 280px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.banner-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-tile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #14171d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.project-card:hover .banner-grid-2x2 .banner-tile,
+.featured-card:hover .banner-grid-2x2 .banner-tile {
+    border-color: rgba(57, 211, 83, 0.25);
+}
+
+.project-card:hover .banner-tile:hover,
+.featured-card:hover .banner-tile:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.project-card:hover .banner-tile img,
+.featured-card:hover .banner-tile img {
+    filter: brightness(1.05);
+}
+
 .project-image .project-collage {
     width: 100%;
     height: 100%;
@@ -1579,6 +1647,40 @@ button,
 
 .modal-actions {
     margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.modal-notice-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(57, 211, 83, 0.08);
+    border: 1px solid rgba(57, 211, 83, 0.3);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+}
+
+.modal-notice-pill svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.view-only-btn {
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+}
+
+.view-only-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 /* Modal collage */

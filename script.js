@@ -185,16 +185,203 @@ const projects = [
         featured: true
     },
     {
+        id: 26,
+        name: "PixelBoard",
+        badge: "LATEST",
+        folder: "PixelBoard",
+        tagline: "// SUPERCHARGED GBOARD WITH GEMINI RAMBLER & AI WRITING",
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+        description: "Supercharged Gboard mod unlocking Google Pixel's Gemini 'Rambler' natural voice dictation and AI writing tools on any Android phone. Coexistence package with zero root required.",
+        shortDescription: "Unlock Google's Gemini 'Rambler' natural voice dictation and AI writing tools on ANY Android phone. Coexistence build with zero root required.",
+        longDescription: `
+            <div class="ktm-project-details">
+                <div class="ktm-tagline">// SUPERCHARGED GBOARD WITH GEMINI RAMBLER & AI WRITING</div>
+                <p class="ktm-subheading">Unlock Google Pixel's Gemini "Rambler" Natural Voice Dictation & AI Writing Tools on ANY Android phone. Coexistence build with zero root required.</p>
+                
+                <div class="ktm-actions-row">
+                    <a href="https://github.com/Akshayykadam/PixelBoard/raw/main/output/PixelBoard.apk" target="_blank" class="btn btn-primary ktm-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download APK (v18.0.3)</span>
+                    </a>
+                    <a href="https://github.com/Akshayykadam/PixelBoard" target="_blank" class="btn btn-ghost ktm-btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub Repository</span>
+                    </a>
+                </div>
+
+                <div class="ktm-expanded-details" style="display: block;">
+                    <h4 class="ktm-section-title">⚡ Core Value Propositions</h4>
+                    <div class="ktm-grid">
+                        <div class="ktm-card">
+                            <h5>🎙️ Gemini Rambler Natural Voice Dictation</h5>
+                            <p>Dictate messages naturally without stuttering or manual punctuation. Uses Google's next-gen on-device speech model to handle long pauses, tone inflections, and seamless conversational editing.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>✍️ Intelligent AI Writing Assistant</h5>
+                            <p>Generate replies, polish draft tone (Professional, Casual, Concise), and fix typos on the fly directly inside your keyboard overlay across all messaging apps.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🛡️ Safe Side-by-Side Coexistence</h5>
+                            <p>Engineered with independent coexistence package ID (<code>com.akshaykadam.pixelboard</code>), so you can install and run it alongside factory Gboard without replacing system files.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🚀 100% Non-Root Installation</h5>
+                            <p>No Magisk, KernelSU, root shell, or bootloader unlocking required. Installs as a standalone Android APK on any device running Android 8.0+.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        tech: ["Android", "Kotlin", "Gboard Mod", "Gemini AI"],
+        github: "https://github.com/Akshayykadam/PixelBoard",
+        release: "https://github.com/Akshayykadam/PixelBoard/raw/main/output/PixelBoard.apk",
+        releaseVersion: "v18.0.3",
+        releaseLabel: "Download APK",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M8 16h8"/></svg>',
+        category: "mobile",
+        featured: true
+    },
+    {
         id: 20,
-        name: "OpenCity3D Engine",
+        name: "GeoCity3D Engine",
         folder: "GeoCity3D — OpenStreetMap 3D City Generator",
+        bannerType: "grid-2x2",
         images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
-        description: "Generate real-world 3D cities in Unity directly from OpenStreetMap data with a single click. No external tools or complex parsing required.",
+        description: "Generate real-world 3D cities in Unity from OpenStreetMap data with a single click. Clean architectural maquette style with solid, volumetric geometry — ready for urban planning, visualization, and game prototyping.",
+        shortDescription: "Generate real-world 3D cities in Unity from OpenStreetMap data with a single click. Clean architectural maquette style with solid volumetric geometry.",
+        longDescription: `
+            <div class="ktm-project-details">
+                <div class="ktm-tagline">// SOLID GEOMETRY • ARCHITECTURAL MAQUETTE STYLE</div>
+                <p class="ktm-subheading">Generate real-world 3D cities in Unity from OpenStreetMap data with a single click. Clean architectural maquette style with solid, volumetric geometry — ready for urban planning, visualization, and game prototyping.</p>
+                
+                <div class="ktm-expanded-details" style="display: block; margin-top: 1.5rem;">
+                    <h4 class="ktm-section-title">✨ Key Engine Features</h4>
+                    <div class="ktm-grid">
+                        <div class="ktm-card">
+                            <h5>🏢 Solid Volumetric Geometry</h5>
+                            <p>Watertight sealed extrusions with roof caps, bottom caps, thick roads with sidewalls and end caps, and elevated bridges with support pillars.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🌳 Architectural Maquette Style</h5>
+                            <p>Clean solid-color materials with double-sided rendering, real-world depth shadows, solid tree trunks with canopies, and distinct water bodies.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>⚡ One-Click Generation</h5>
+                            <p>Enter coordinates and radius to fetch real building footprints, road networks, and land use via Overpass API with smart height estimation.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>📐 Floating-Point Precision</h5>
+                            <p>Built-in OriginShifter for large geospatial coordinates, mesh collision on buildings, and render pipeline agnostic (URP, HDRP, Built-in).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
         tech: ["Unity", "C#", "OpenStreetMap"],
         github: "https://github.com/Akshayykadam/OpenCity3D-Engine",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6M9 9h0M15 9h0M9 13h0M15 13h0"/></svg>',
         category: "game",
         featured: true
+    },
+    {
+        id: 27,
+        name: "Belagavi IHM Dashboard",
+        folder: "Belagavi-IHM-Dashboard",
+        bannerType: "grid-2x2",
+        images: ["1.png", "2.png", "3.png", "4.png", "5.png"],
+        description: "Official Government of Karnataka Belagavi District Integrated Hydro-Met Monitoring Platform managed by the District Administration in coordination with WRD, KSNDMC, CGWB, and IMD.",
+        shortDescription: "Integrated Hydro-Met monitoring platform for Belagavi District Administration with GIS dam tracking, rainfall telemetry, and flood alert feeds.",
+        longDescription: `
+            <div class="ktm-project-details">
+                <div class="ktm-tagline">// INTEGRATED HYDRO-MET MONITORING PLATFORM</div>
+                <p class="ktm-subheading">Official Government of Karnataka Belagavi District Integrated Hydro-Met Monitoring Platform managed by the District Administration in coordination with WRD, KSNDMC, CGWB, and IMD.</p>
+                
+                <div style="margin-top: 1rem; padding: 0.8rem 1.2rem; background: rgba(57, 211, 83, 0.06); border: 1px solid rgba(57, 211, 83, 0.25); border-radius: 8px;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <span>RESTRICTED GOVERNMENT DEPLOYMENT</span>
+                    </div>
+                    <p style="margin-top: 0.4rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Direct external access is restricted to authorized district administration personnel and emergency disaster response teams. Screenshots and telemetry architecture are presented for technical review.</p>
+                </div>
+
+                <div class="ktm-expanded-details" style="display: block; margin-top: 1.5rem;">
+                    <h4 class="ktm-section-title">📊 Key System Capabilities</h4>
+                    <div class="ktm-grid">
+                        <div class="ktm-card">
+                            <h5>🛰️ Real-Time Weather & Telemetry</h5>
+                            <p>Automated ingestion from Open-Meteo & IMD radar portals with automated 60s client-side refresh and 5-minute server-level cache orchestration.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🌊 Krishna Basin Dam Hydrology</h5>
+                            <p>Live SCADA reservoir tracking across major dams in the Krishna river basin, monitoring inflow, live storage, and discharge metrics.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🌉 Submerged Bridge Warning Hub</h5>
+                            <p>Real-time district alert matrix tracking high-risk river bridges, alerting administrative authorities before critical flash flooding thresholds.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>💧 Groundwater & Water Quality Analysis</h5>
+                            <p>Integration with NWDP (Ministry of Jal Shakti) and CPCB National Water Monitoring Program for comprehensive groundwater table analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "GIS / Leaflet", "Hydro-Met APIs"],
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>',
+        category: "other",
+        noRedirect: true,
+        hideGithub: true
+    },
+    {
+        id: 28,
+        name: "Belagavi Tourism & AI Guide",
+        badge: "LIVE",
+        folder: "Belagavi-Tourism",
+        bannerType: "grid-2x2",
+        images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
+        description: "Official district tourism portal showcasing the extraordinary heritage, waterfalls, and eco-trails of Belagavi, featuring 'Belagavi Saathi' — an AI travel assistant powered by Google Gemini.",
+        shortDescription: "Official district tourism portal featuring heritage trails, eco-tourism spots, and 'Belagavi Saathi' — a Gemini AI conversational travel assistant.",
+        longDescription: `
+            <div class="ktm-project-details">
+                <div class="ktm-tagline">// EXPERIENCE THE EXTRAORDINARY • BELAGAVI TOURISM</div>
+                <p class="ktm-subheading">Comprehensive district tourism web portal featuring interactive heritage trails, eco-tourism spots across the Western Ghats, and 'Belagavi Saathi' — an AI conversational travel guide powered by Google Gemini.</p>
+                
+                <div class="ktm-actions-row">
+                    <a href="https://belagavitourism.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary ktm-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Visit Live Website</span>
+                    </a>
+                </div>
+
+                <div class="ktm-expanded-details" style="display: block; margin-top: 1.5rem;">
+                    <h4 class="ktm-section-title">✨ Key Portal Features</h4>
+                    <div class="ktm-grid">
+                        <div class="ktm-card">
+                            <h5>🤖 'Belagavi Saathi' Gemini AI Assistant</h5>
+                            <p>Conversational travel guide that answers traveler inquiries about local cuisines, historic fort facts, transport options, and custom itineraries using Google Gemini.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>🗺️ Interactive District Exploration</h5>
+                            <p>Deep-dive guides for Gokak Falls, Belagavi Fort, Rajhansgad (Yellur Fort), Kamala Basti, Bhimgad Sanctuary, and Suvarna Vidhana Soudha.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>📸 Dynamic Media Galleries</h5>
+                            <p>High-resolution photography and video galleries highlighting local cultural festivities, monsoon Sahyadri trails, and historical architecture.</p>
+                        </div>
+                        <div class="ktm-card">
+                            <h5>⚡ Optimized Web Architecture</h5>
+                            <p>Zero-bloat, responsive frontend with rich interactions, SEO meta tags, and high-speed delivery deployed on Vercel edge infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        tech: ["HTML5 / CSS3", "JavaScript", "Google Gemini AI", "Vercel"],
+        liveUrl: "https://belagavitourism.vercel.app/",
+        liveLabel: "Visit Live Website",
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+        category: "ai"
     },
     {
         id: 23,
@@ -725,6 +912,24 @@ function buildCollageHtml(project, containerClass) {
 
     const images = project.images.slice(0, 5);
     const folderPath = `assets/projects/${project.folder}`;
+
+    if (project.bannerType === 'grid-2x2') {
+        const gridImgs = project.images.slice(0, 4);
+        const tilesHtml = gridImgs.map((img, i) => `
+            <div class="banner-tile banner-tile-${i + 1}">
+                <img src="${folderPath}/${img}" alt="${project.name} preview ${i + 1}" loading="lazy">
+            </div>
+        `).join('');
+
+        return `
+            <div class="${containerClass} banner-grid-2x2-container">
+                <div class="banner-grid-2x2">
+                    ${tilesHtml}
+                </div>
+            </div>
+        `;
+    }
+
     const positions = ['collage-far-left', 'collage-left', 'collage-center', 'collage-right', 'collage-far-right'];
 
     const ordered = [];
@@ -774,6 +979,21 @@ function renderFeatured() {
         const badgeHtml = project.badge ? ` <span class="featured-badge">${project.badge}</span>` : '';
 
         if (project.tagline) {
+            let actionsHtml = '';
+            if (project.release) {
+                actionsHtml += `
+                    <a href="${project.release}" target="_blank" rel="noopener" class="btn btn-primary" onclick="event.stopPropagation();" style="font-size: 0.75rem; padding: 0.5rem 1.2rem; background: var(--accent); color: #000; border: none; font-weight: bold; box-shadow: 0 0 10px var(--accent-glow); cursor: none;">
+                        <span>${project.releaseLabel || 'Download APK'}</span>
+                    </a>
+                `;
+            }
+            if (project.github) {
+                actionsHtml += `
+                    <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-ghost" onclick="event.stopPropagation();" style="font-size: 0.75rem; padding: 0.5rem 1.2rem; cursor: none;">
+                        <span>GitHub</span>
+                    </a>
+                `;
+            }
             card.innerHTML = `
                 ${badgeHtml}
                 ${imgHtml}
@@ -781,10 +1001,8 @@ function renderFeatured() {
                     <h3 class="featured-title scramble">${project.name}</h3>
                     <div class="featured-tagline" style="font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; letter-spacing: 0.05em; text-shadow: 0 0 10px var(--accent-glow);">${project.tagline}</div>
                     <p class="featured-desc" style="margin-bottom: 1.5rem;">${project.shortDescription || project.description}</p>
-                    <div class="featured-actions" style="display: flex; gap: 1rem; align-items: center;">
-                        <a href="https://drive.google.com/file/d/1Litx1FEtHT1OJNvyr_se3pSEbeEzf-DZ/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary" onclick="event.stopPropagation();" style="font-size: 0.75rem; padding: 0.5rem 1.2rem; background: var(--accent); color: #000; border: none; font-weight: bold; box-shadow: 0 0 10px var(--accent-glow); cursor: none;">
-                            <span>Download APK</span>
-                        </a>
+                    <div class="featured-actions" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                        ${actionsHtml}
                     </div>
                 </div>
             `;
@@ -813,7 +1031,7 @@ function renderFeatured() {
 // Grid projects (3-column) — non-featured with images
 function renderGridProjects() {
     const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0);
-    const show = gridProjects.slice(0, 9);
+    const show = gridProjects.slice(0, 12);
 
     const fragment = document.createDocumentFragment();
     show.forEach((project, index) => {
@@ -824,17 +1042,41 @@ function renderGridProjects() {
         const imgHtml = buildCollageHtml(project, 'project-image');
         const techHtml = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
 
-        const downloadBtn = project.release ? `
-            <a href="${project.release}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                <span>${project.releaseLabel || 'Download APK'}</span>
-                <span class="version-tag">${project.releaseVersion}</span>
-            </a>
-        ` : '';
+        let actionBtn = '';
+        if (project.release) {
+            actionBtn = `
+                <a href="${project.release}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>${project.releaseLabel || 'Download APK'}</span>
+                    <span class="version-tag">${project.releaseVersion}</span>
+                </a>
+            `;
+        } else if (project.liveUrl) {
+            actionBtn = `
+                <a href="${project.liveUrl}" target="_blank" rel="noopener" class="download-btn" onclick="event.stopPropagation();">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <span>${project.liveLabel || 'Visit Website'}</span>
+                </a>
+            `;
+        } else if (project.noRedirect) {
+            actionBtn = `
+                <span class="download-btn view-only-btn" onclick="event.stopPropagation(); openModal(projects.find(p => p.id === ${project.id}));">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>Screenshots & Info</span>
+                </span>
+            `;
+        }
 
         card.innerHTML = `
             ${imgHtml}
@@ -847,7 +1089,7 @@ function renderGridProjects() {
                 </h3>
                 <p class="project-description">${project.shortDescription || project.description}</p>
                 <div class="project-tech">${techHtml}</div>
-                ${downloadBtn}
+                ${actionBtn}
             </div>
         `;
 
@@ -860,7 +1102,7 @@ function renderGridProjects() {
 // More projects (compact 2-column list)
 function renderMoreProjects() {
     // Everything not featured and not in the main grid
-    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0).slice(0, 9);
+    const gridProjects = projects.filter(p => !p.featured && p.folder && p.images && p.images.length > 0).slice(0, 12);
     const gridIds = new Set(gridProjects.map(p => p.id));
     const featuredIds = new Set(projects.filter(p => p.featured).map(p => p.id));
 
@@ -983,7 +1225,56 @@ function openModal(project) {
     modalTitle.textContent = project.name;
     modalDescription.innerHTML = project.longDescription || project.description;
     modalTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
-    modalGithub.href = project.github;
+    const modalActions = document.querySelector('.modal-actions');
+    if (modalActions) {
+        let actionButtons = '';
+        if (project.liveUrl) {
+            actionButtons += `
+                <a href="${project.liveUrl}" target="_blank" rel="noopener" class="btn btn-primary" id="modal-live">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <span>${project.liveLabel || 'Visit Website'}</span>
+                </a>
+            `;
+        }
+        if (project.release) {
+            actionButtons += `
+                <a href="${project.release}" target="_blank" rel="noopener" class="btn ${project.liveUrl ? 'btn-ghost' : 'btn-primary'}" id="modal-release">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>${project.releaseLabel || 'Download APK'}</span>
+                </a>
+            `;
+        }
+        if (project.github && !project.hideGithub) {
+            actionButtons += `
+                <a href="${project.github}" target="_blank" rel="noopener" class="btn ${(project.liveUrl || project.release) ? 'btn-ghost' : 'btn-primary'}" id="modal-github">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span>View on GitHub</span>
+                </a>
+            `;
+        }
+        if (project.noRedirect) {
+            actionButtons += `
+                <div class="modal-notice-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>Restricted Government System • Technical Demo Only</span>
+                </div>
+            `;
+        }
+        modalActions.innerHTML = actionButtons;
+    }
 
     const modalLayout = document.querySelector('.modal-layout');
     const modalLeft = document.querySelector('.modal-left');
