@@ -296,7 +296,7 @@ const projects = [
                 <div class="ktm-tagline">// INTEGRATED HYDRO-MET MONITORING PLATFORM</div>
                 <p class="ktm-subheading">Official Government of Karnataka Belagavi District Integrated Hydro-Met Monitoring Platform managed by the District Administration in coordination with WRD, KSNDMC, CGWB, and IMD.</p>
                 
-                <div style="margin-top: 1rem; padding: 0.8rem 1.2rem; background: rgba(57, 211, 83, 0.06); border: 1px solid rgba(57, 211, 83, 0.25); border-radius: 8px;">
+                <div style="margin-top: 1rem; padding: 0.8rem 1.2rem; background: var(--accent-dim); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px;">
                     <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                         <span>RESTRICTED GOVERNMENT DEPLOYMENT</span>
@@ -681,100 +681,213 @@ const typedRole = document.getElementById('typed-role');
 const gridCanvas = document.getElementById('grid-canvas');
 
 // ========================================
-// ANIMATED GRID BACKGROUND
+// GLOBAL MOUSE & DEVICE TRACKING
 // ========================================
-function initGrid() {
+let mouseX = typeof window !== 'undefined' ? window.innerWidth / 2 : 0;
+let mouseY = typeof window !== 'undefined' ? window.innerHeight / 2 : 0;
+let ringX = mouseX, ringY = mouseY;
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+// ========================================
+// 3D PARALLAX BACKGROUND SYSTEM
+// Subtle, atmospheric 3D environment in deep-black theme
+// ========================================
+function init3DParallaxBackground() {
+    if (!gridCanvas) return;
     const ctx = gridCanvas.getContext('2d');
-    let w, h;
-    const CELL = 60;
-    const dots = [];
+    let w = 0, h = 0;
+    let dpr = 1;
+    let isVisible = true;
+    let scrollY = window.scrollY || window.pageYOffset || 0;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Smooth volumetric light coordinates with damped physics
+    let glowX = typeof window !== 'undefined' ? window.innerWidth / 2 : 0;
+    let glowY = typeof window !== 'undefined' ? window.innerHeight / 2 : 0;
+
+    // Parallax camera offset
+    let camX = 0, camY = 0;
+
+    // Atmospheric 3D Floating Dust Motes
+    const MOTE_COUNT = 35;
+    const motes = [];
+    for (let i = 0; i < MOTE_COUNT; i++) {
+        motes.push({
+            x: Math.random(),
+            y: Math.random(),
+            z: 0.2 + Math.random() * 0.8,
+            vx: (Math.random() - 0.5) * 0.00015,
+            vy: -0.0001 - Math.random() * 0.0002,
+            size: 0.8 + Math.random() * 1.4,
+            baseAlpha: 0.2 + Math.random() * 0.5,
+            phase: Math.random() * Math.PI * 2
+        });
+    }
 
     function resize() {
-        w = gridCanvas.width = window.innerWidth;
-        h = gridCanvas.height = window.innerHeight;
-        // Rebuild dot grid
-        dots.length = 0;
-        for (let x = 0; x <= w; x += CELL) {
-            for (let y = 0; y <= h; y += CELL) {
-                dots.push({ x, y, phase: Math.random() * Math.PI * 2 });
-            }
-        }
+        w = window.innerWidth;
+        h = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        gridCanvas.width = w * dpr;
+        gridCanvas.height = h * dpr;
+        gridCanvas.style.width = w + 'px';
+        gridCanvas.style.height = h + 'px';
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
     }
 
     resize();
     window.addEventListener('resize', resize);
 
-    let time = 0;
-    let lastTime = 0;
-    function draw(timestamp) {
-        if (!lastTime) lastTime = timestamp;
-        const deltaTime = timestamp - lastTime;
-        lastTime = timestamp;
+    window.addEventListener('scroll', () => {
+        scrollY = window.scrollY || window.pageYOffset || 0;
+    }, { passive: true });
 
-        // 0.015 per frame at 60fps (~16.67ms) is approx deltaTime * 0.0009
-        time += deltaTime * 0.0009;
+    document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+        if (isVisible) {
+            lastTime = performance.now();
+            requestAnimationFrame(draw);
+        }
+    });
+
+    let time = 0;
+    let lastTime = performance.now();
+
+    function draw(timestamp) {
+        if (!isVisible) return;
+        const deltaTime = Math.min(timestamp - lastTime, 50);
+        lastTime = timestamp;
+        time += deltaTime * 0.001;
+
+        // Damped tracking for volumetric glow (feels smooth, expensive)
+        glowX += (mouseX - glowX) * 0.045;
+        glowY += (mouseY - glowY) * 0.045;
+
+        // Subtle camera parallax
+        const targetCamX = (mouseX - w / 2) * 0.025;
+        const targetCamY = (mouseY - h / 2) * 0.025;
+        camX += (targetCamX - camX) * 0.04;
+        camY += (targetCamY - camY) * 0.04;
+
+        // Clear canvas
         ctx.clearRect(0, 0, w, h);
 
-        // Draw grid lines
-        ctx.strokeStyle = 'rgba(57, 211, 83, 0.04)';
+        // ==========================================
+        // 1. VOLUMETRIC TITANIUM SILVER AURA
+        // High-end ambient atmospheric glow
+        // ==========================================
+        const glowRadius = Math.max(340, Math.min(w, h) * 0.45);
+        const ambientGlow = ctx.createRadialGradient(glowX, glowY, 0, glowX, glowY, glowRadius);
+        ambientGlow.addColorStop(0, 'rgba(255, 255, 255, 0.045)');
+        ambientGlow.addColorStop(0.35, 'rgba(225, 230, 240, 0.018)');
+        ambientGlow.addColorStop(0.7, 'rgba(180, 190, 205, 0.005)');
+        ambientGlow.addColorStop(1, 'rgba(8, 8, 9, 0)');
+        ctx.fillStyle = ambientGlow;
+        ctx.fillRect(0, 0, w, h);
+
+        // ==========================================
+        // 2. PRECISION ARCHITECTURAL SPOTLIGHT GRID
+        // Hairline coordinates + interactive titanium spotlight
+        // ==========================================
+        const GRID_SIZE = 56;
+        const startX = Math.floor((-camX) % GRID_SIZE);
+        const startY = Math.floor((-camY - scrollY * 0.2) % GRID_SIZE);
+        const spotlightRadius = 340;
+        const spotSq = spotlightRadius * spotlightRadius;
+
         ctx.lineWidth = 0.5;
-        for (let x = 0; x <= w; x += CELL) {
+
+        for (let x = startX; x <= w; x += GRID_SIZE) {
+            const dx = Math.abs(x - mouseX);
+            const lineAlpha = dx < spotlightRadius ? 0.02 + (1 - dx / spotlightRadius) * 0.055 : 0.015;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, h);
             ctx.stroke();
         }
-        for (let y = 0; y <= h; y += CELL) {
+
+        for (let y = startY; y <= h; y += GRID_SIZE) {
+            const dy = Math.abs(y - mouseY);
+            const lineAlpha = dy < spotlightRadius ? 0.02 + (1 - dy / spotlightRadius) * 0.055 : 0.015;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
             ctx.beginPath();
             ctx.moveTo(0, y);
             ctx.lineTo(w, y);
             ctx.stroke();
         }
 
-        // Draw glowing dots at intersections
-        dots.forEach(dot => {
-            const pulse = Math.sin(time + dot.phase) * 0.5 + 0.5;
-            const alpha = 0.05 + pulse * 0.15;
-            const radius = 1 + pulse * 1.5;
-
-            ctx.beginPath();
-            ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(57, 211, 83, ${alpha})`;
-            ctx.fill();
-
-            // Glow
-            if (pulse > 0.7) {
-                ctx.beginPath();
-                ctx.arc(dot.x, dot.y, radius + 3, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(57, 211, 83, ${(pulse - 0.7) * 0.15})`;
-                ctx.fill();
-            }
-
-            // Interactive Cursor Connection
-            if (!isTouchDevice) {
-                const dx = dot.x - mouseX;
-                const dy = dot.y - mouseY;
-                const distSq = dx * dx + dy * dy;
-                if (distSq < 22500) { // 150 * 150 = 22500
+        // Precision Intersection Micro-Crosshairs within spotlight
+        const crossSize = 3;
+        for (let x = startX; x <= w; x += GRID_SIZE) {
+            for (let y = startY; y <= h; y += GRID_SIZE) {
+                const distSq = (x - mouseX) * (x - mouseX) + (y - mouseY) * (y - mouseY);
+                if (distSq < spotSq) {
                     const dist = Math.sqrt(distSq);
-                    const intensity = 1 - (dist / 150);
-                    
-                    // Thicker/brighter dot
-                    ctx.beginPath();
-                    ctx.arc(dot.x, dot.y, radius + intensity * 2, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(57, 211, 83, ${alpha + intensity * 0.5})`;
-                    ctx.fill();
+                    const proximity = 1 - (dist / spotlightRadius);
+                    const alpha = proximity * 0.32;
 
-                    // Connecting line
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+                    ctx.lineWidth = 0.75;
                     ctx.beginPath();
-                    ctx.moveTo(dot.x, dot.y);
-                    ctx.lineTo(mouseX, mouseY);
-                    ctx.strokeStyle = `rgba(57, 211, 83, ${intensity * 0.2})`;
-                    ctx.lineWidth = 1;
+                    ctx.moveTo(x - crossSize, y);
+                    ctx.lineTo(x + crossSize, y);
+                    ctx.moveTo(x, y - crossSize);
+                    ctx.lineTo(x, y + crossSize);
                     ctx.stroke();
+
+                    // Micro center dot
+                    if (proximity > 0.45) {
+                        ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 1.2})`;
+                        ctx.beginPath();
+                        ctx.arc(x, y, 1, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
                 }
             }
+        }
+
+        // ==========================================
+        // 3. ATMOSPHERIC 3D STARDUST MOTES
+        // Subtle floating particles with depth
+        // ==========================================
+        motes.forEach(m => {
+            if (!prefersReducedMotion) {
+                m.x += m.vx;
+                m.y += m.vy;
+                if (m.y < -0.05) m.y = 1.05;
+                if (m.x < -0.05) m.x = 1.05;
+                if (m.x > 1.05) m.x = -0.05;
+            }
+
+            const px = m.x * w + camX * m.z * 1.2;
+            const py = m.y * h + (camY + scrollY * 0.1) * m.z;
+
+            const twinkle = Math.sin(time * 2 + m.phase) * 0.3 + 0.7;
+            const alpha = m.baseAlpha * m.z * twinkle * 0.35;
+            if (alpha <= 0.01) return;
+
+            const radius = Math.max(0.6, m.size * m.z);
+
+            ctx.beginPath();
+            ctx.arc(px, py, radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.fill();
         });
+
+        // ==========================================
+        // 4. SOFT SCREEN EDGE VIGNETTE
+        // Dissolves canvas borders into deep #080809
+        // ==========================================
+        const vRadius = Math.max(w, h) * 0.72;
+        const vignette = ctx.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.28, w / 2, h / 2, vRadius);
+        vignette.addColorStop(0, 'rgba(7, 7, 7, 0)');
+        vignette.addColorStop(0.75, 'rgba(7, 7, 7, 0.5)');
+        vignette.addColorStop(1, 'rgba(7, 7, 7, 0.98)');
+        ctx.fillStyle = vignette;
+        ctx.fillRect(0, 0, w, h);
 
         requestAnimationFrame(draw);
     }
@@ -783,11 +896,37 @@ function initGrid() {
 }
 
 // ========================================
+// 3D CARD TILT ON HOVER (Minimal input, subtle depth)
+// ========================================
+function init3DCardTilt() {
+    if (isTouchDevice) return;
+
+    const cards = document.querySelectorAll('.project-card, .featured-card, .connect-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotX = ((y - centerY) / centerY) * -4.5;
+            const rotY = ((x - centerX) / centerX) * 4.5;
+
+            card.style.transition = 'transform 0.08s ease-out, border-color 0.3s ease, box-shadow 0.3s ease';
+            card.style.transform = `perspective(850px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = 'transform 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+            card.style.transform = '';
+        });
+    });
+}
+
+// ========================================
 // MAGNETIC CURSOR
 // ========================================
-let mouseX = 0, mouseY = 0;
-let ringX = 0, ringY = 0;
-const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
 if (!isTouchDevice) {
     document.addEventListener('mousemove', (e) => {
@@ -998,7 +1137,7 @@ function renderFeatured() {
                 ${badgeHtml}
                 ${imgHtml}
                 <div class="featured-info">
-                    <h3 class="featured-title scramble">${project.name}</h3>
+                    <h3 class="featured-title">${project.name}</h3>
                     <div class="featured-tagline" style="font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; letter-spacing: 0.05em; text-shadow: 0 0 10px var(--accent-glow);">${project.tagline}</div>
                     <p class="featured-desc" style="margin-bottom: 1.5rem;">${project.shortDescription || project.description}</p>
                     <div class="featured-actions" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
@@ -1011,7 +1150,7 @@ function renderFeatured() {
                 ${badgeHtml}
                 ${imgHtml}
                 <div class="featured-info">
-                    <h3 class="featured-title scramble">${project.name}</h3>
+                    <h3 class="featured-title">${project.name}</h3>
                     <p class="featured-desc">${project.shortDescription || project.description}</p>
                     <div class="featured-tech">${techHtml}</div>
                     <a href="${project.github}" target="_blank" rel="noopener" class="featured-link" onclick="event.stopPropagation();">
@@ -1082,7 +1221,7 @@ function renderGridProjects() {
             ${imgHtml}
             <div class="project-content">
                 <h3 class="project-title">
-                    <span class="scramble">${project.name}</span>
+                    <span>${project.name}</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
@@ -1126,7 +1265,7 @@ function renderMoreProjects() {
         item.innerHTML = `
             ${icon}
             <div class="more-info">
-                <span class="more-name scramble">${project.name}</span>
+                <span class="more-name">${project.name}</span>
                 <div class="more-tech-tags">${techTags}</div>
             </div>
             <span class="more-arrow">
@@ -1517,29 +1656,6 @@ document.querySelectorAll('a[href^="#"]:not([target="_blank"])').forEach(anchor 
 });
 
 // ========================================
-// DATA SCRAMBLE EFFECT
-// ========================================
-function initScrambleEffect() {
-    const chars = '!<>-_\\\\/[]{}—=+*^?#________';
-    document.querySelectorAll('.scramble').forEach(el => {
-        const originalText = el.innerText;
-        el.addEventListener('mouseenter', () => {
-            let iterations = 0;
-            const interval = setInterval(() => {
-                el.innerText = originalText.split('')
-                    .map((char, i) => {
-                        if (i < iterations) return char;
-                        return chars[Math.floor(Math.random() * chars.length)];
-                    })
-                    .join('');
-                if (iterations >= originalText.length) clearInterval(interval);
-                iterations += 1/3;
-            }, 30);
-        });
-    });
-}
-
-// ========================================
 // TERMINAL TYPING EFFECT
 // ========================================
 function initTerminalTyping() {
@@ -1576,14 +1692,14 @@ function initTerminalTyping() {
 // INITIALIZATION
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    initGrid();
+    init3DParallaxBackground();
     typeRole();
     renderFeatured();
     renderGridProjects();
     renderMoreProjects();
     renderPlugins();
-    initScrambleEffect();
     initTerminalTyping();
+    init3DCardTilt();
 
     // Delay scroll reveal init so elements are in DOM
     requestAnimationFrame(() => {
